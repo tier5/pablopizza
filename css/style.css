@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Chau+Philomene+One:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+/*font-family: 'Chau Philomene One', sans-serif;*/
+/*font-family: 'Fjalla One', sans-serif;*/
+
+h1,h2,h3,h4,h5,h6{font-family: 'Chau Philomene One', sans-serif; color: #fff;}
+
+
+body{margin: 0; padding: 0; background: #141413; font-family: 'Fjalla One', sans-serif; color: #fff;}
+img{max-width: 100%;}
+/*header{position: relative;}*/
+.header-top{height: 26px; position: absolute; top: 0; left: 18%; z-index: 7777; background: url(../images/header-top.png) no-repeat; width: 71%;}
+/*.order-now {
+    width: 239px;
+    height: 14px;
+    position: absolute;
+    top: 7px;
+    left: 16%;
+    z-index: 5555;
+}*/
+.order-now {
+    width: 274px;
+    height: 14px;
+    position: absolute;
+    top: 7px;
+    left: 19%;
+    z-index: 5555;
+}
+
+.relative{position: relative; }
+.left-logo{width: 700px; height:632px; position: absolute; left: 0; top: 0; background: url(../images/header-graphics2.png) no-repeat; 
+z-index: 4444; background-size: covered; background-size: 80%}
+
+.left-logo:after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 73px;
+    left: 0;
+    bottom: 0;
+    background: #141413;
+    bottom: 0;
+    top: 60%;
+}
+
+
+
+.logo{width: 36%; padding:13px;}
+
+/*.banner{text-align: center; height: 642px; overflow: hidden;}*/
+.banner img{width: 100%;}
+
+/*.carousel-inner>.item>a>img, .carousel-inner>.item>img, .img-responsive, .thumbnail a>img, .thumbnail>img{margin:0 auto;}*/
+/*.order-now{width: 468px; height: 14px; position: absolute; bottom: -150px; left: 0;}*/
+
+/*.order-now {
+    width: 239px;
+    height: 14px;
+    position: absolute;
+    top: 100px;
+    left: 16px;
+    z-index: 100;
+}*/
+
+.item{position: relative;}
+.banner-graphics{position: absolute; bottom: 0; height: 84px; left: 0; right: 0; top: -60px; text-align: center;}
+.bodypart{position: relative;}
+/*.left-menu{width: 130px; height: 904px; position: fixed; left: 0; top: 30%; z-index: 7777;  padding-left: 2%}*/
+
+.left-menu{width: 130px; height: 700px; position: absolute; left: 2%; top: 30%; z-index: 7777;  padding-left: 0}
+
+
+
+.social-media{margin: 0; padding: 24px 0 0; position: absolute; right: 0; top: 0; z-index: 7777;}
+.social-media ul{margin: 0; padding: 0;}
+.social-media ul li{margin: 0; padding: 0 3px; display: inline-block; list-style: none; width: 55px;}
+.social-media ul li a{text-decoration: none;}
+
+.left-menu ul{margin: 0; padding: 0;}
+.left-menu ul li{margin: 0; padding: 0; list-style: none;}
+
+.menu-list{margin-top: -4px; display: block;}
+.news-list{margin-top: -5px; display: block;}
+.about-list{margin-top: -5px; display: block;}
+.location-list{margin-top: -6px; display: block;}
+.joinclub-list{margin-top: -6px; display: block;}
+.feedback-list{margin-top: -6px; display: block;}
+.bottom-border{margin-top: -6px; display: block;}
+
+
+
+.community-area{position: relative; text-align: center; }
+.com-pic{margin-bottom: 15px; background: url(../images/community-circle.png) no-repeat center; text-align: center; width:158px; height: 158px;
+background-size: 100%; margin: 0 auto 20px; font-family: 'Chau Philomene One', sans-serif; font-size: 48px; padding-top: 48px;
+}
+.com-days {
+    color: #eebd43;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 26px;
+    margin-bottom: 14px;
+}
+.com-info{font-family: 'Chau Philomene One', sans-serif; font-size: 18px; line-height: 24px;}
+
+
+
+
+
+/*.heading-graphis{width: 421px; height: 81px; position: absolute; top: 20px; left: 0; background: url(../images/graphics1.png) no-repeat; 
+background-size: 100%;
+}*/
+.heading-graphis {
+    width: 365px;
+    height: 81px;
+    position: absolute;
+    top: 20px;
+    left: 124px;
+    background: url(../images/graphics1.png) no-repeat;
+    background-size: 100%;
+     -ms-transform: rotate(-1deg); /* IE 9 */
+    -webkit-transform: rotate(-1deg); /* Safari */
+    transform: rotate(-1deg); /* Standard syntax */
+    font-family: 'Chau Philomene One', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #fff;
+    padding-top: 34px;
+}
+
+.heading-graphis:after{background: url(../images/graphics-arrow.png) no-repeat; width: 53px; height: 60px; position: absolute; content: '';
+right: -13px;}
+.first-step{padding-top: 70px; padding-bottom: 58px;}
+.first-step h2{font-size: 27px;}
+
+.first-left{padding-left: 19px; padding-top: 62px;}
+.first-left p{line-height: 24px; letter-spacing: 1px;}
+.valid-btn{background: #e64b21; border-radius: 7px; color: #fff; padding: 4px 15px; display: inline-block;}
+
+.bear-month{padding-top: 30px;}
+.bear-month h3{margin: 0; padding: 0 0 17px; font-size: 19px; background: url(../images/heading-graphics.png) repeat-x bottom;}
+.bear-month h4{font-size: 18px; padding-top: 10px;}
+.pizza-holder img{width: 80%;}
+
+.menu-area{min-height: 325px; background: url(../images/menuarea-graphics.jpg) repeat-x #ededec; position: relative;}
+.menu-area ul{text-align: center; padding-top: 120px}
+.menu-area ul li{display: inline-block; list-style: none; width: 200px;}
+.menu-area ul li:last-child{width: 47px; position: relative;}
+.menu-area ul li:last-child img{width: 70%;}
+.menu-area h2{background: url(../images/heading-bg.png) no-repeat; position: absolute; top: 0; left: 20%; width: 310px;
+margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63px;}
+.menu-area ul li:last-child:before{position: absolute; content: ''; background: url(../images/arrow-down.png) no-repeat; 
+width: 80px; height: 50px; top: -60px; right: 25px;}
+.menu-area h2{background: url(../images/heading-bg.png) no-repeat; position: absolute; top: 0; left: 20%; width: 310px;
+margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63px;}
+
+.community-news {/*background: url(../images/community-bg.jpg) repeat-x;*/ min-height: 200px; 
+border-top: 10px solid #493f36; padding-bottom: 124px;
+}
+
+.imp-date1{background: url(../images/community-graphics.png) no-repeat center top 37%;}
+
+
+.community-news h2{background: url(../images/community-bg-head.png) no-repeat; position: absolute; top: -1px; left: 14%; width: 310px;
+margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63px;}
+
+.community-area{padding: 100px 0;}
+
+.imp-date{width: 60px; position: absolute; left: 0; top: 130px;}
+.imp-date img{width: 85%}
+.whats-new{width: 60px; position: absolute; left: 0; top: 0px;}
+.whats-new img{width: 85%}
+
+.free-dough{border-top: 7px solid #38908e; padding-top: 9px; min-height: 200px;}
+.free-dough h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Chau Philomene One', sans-serif; 
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+.free-dough p{font-weight: 300; line-height: 21px;}
+.about-pablos{background: url(../images/abt-bg.jpg) repeat-x #2d2d2d; min-height: 350px;}
+
+
+
+.support{border-top: 7px solid #eebd43; padding-top: 9px; min-height: 200px;}
+.support h3{
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Chau Philomene One', sans-serif; 
+    font-size: 26px;
+    margin-bottom: 18px;
+}
+.support p{font-weight: 300; line-height: 24px;}
+
+.post-demo{background: #2d2d2d; width: 100%; min-height: 200px;}
+.whats-new-row{padding-bottom: 133px;}
+
+
+
+
+
+
+@media (max-width: 2500px) {
+
+	.banner{text-align: center; /*height: 642px;*/ }
+
+}
+
+
+@media (max-width: 1300px) {
+
+	.banner{text-align: center; /*height: 642px;*/overflow: hidden; }
+	.left-logo{width: 43%; background-size: 100%;}
+
+
+	.header-top{height: 26px; position: absolute; top: 0; left: 15%; z-index: 7777; background: url(../images/header-top.png) no-repeat; width: 71%;}
+.order-now {
+    width: 239px;
+    height: 14px;
+    position: absolute;
+    top: 7px;
+    left: 16%;
+    z-index: 5555;
+}
+
+
+}
+
+
+
+
+
+
+
+
+
