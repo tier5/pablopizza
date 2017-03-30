@@ -142,7 +142,7 @@ right: -13px;}
 .bear-month h4{font-size: 18px; padding-top: 10px;}
 .pizza-holder img{width: 80%;}
 
-.menu-area{min-height: 325px; background: url(../images/menuarea-graphics.jpg) repeat-x #ededec; position: relative; z-index: 9999;}
+.menu-area{min-height: 325px; background: url(../images/menuarea-graphics.jpg) repeat-x #ededec; position: relative; z-index: 7777;}
 .menu-area ul{text-align: center; padding-top: 120px}
 .menu-area ul li{display: inline-block; list-style: none; width: 162px;}
 .menu-area ul li:last-child{width: 47px; position: relative;}
@@ -384,10 +384,10 @@ z-index: 9999;
 .social-media ul li{width: 38px;}
 .order-now{top: -3px; width: 123px; left: 20%;}
 .first-left{padding-top: 0;}
-.left-menu{width: 19%; position: fixed; top: 5%;}
+.left-menu{width: 19%; position: fixed; top: 5%; z-index: 8888;}
 .grand-junction{width: 56%; padding: 9px 0; font-size: 18px;}
 .grand-frutia{width: 52%; padding: 9px 0; font-size: 18px;}
-.location-pop .close{top: -6px; right: -6px; width: 32px; height: 32px;}
+.location-pop .close{top: -6px; right: -6px; width: 32px; height: 32px; z-index: 9999;}
 .banner-graphics{display: none;}
 .left-logo:after{background: none;}
 .logo{width: 46%;}
