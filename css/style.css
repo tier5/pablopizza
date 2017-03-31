@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6{font-family: 'Chau Philomene One', sans-serif; color: #fff;}
 body{margin: 0; padding: 0; background: #141413; font-family: 'Fjalla One', sans-serif; color: #fff;}
 img{max-width: 100%;}
 /*header{position: relative;}*/
-.header-top{height: 26px; position: absolute; top: 0; left: 18%; z-index: 7777; background: url(../images/header-top.png) no-repeat; width: 71%; background-size: cover;}
+.header-top{height: 26px; position: absolute; top: 0; left: 18%; z-index: 7777; background: url(../images/header-top.png) no-repeat; background-size: cover; width: 71%;}
 /*.order-now {
     width: 239px;
     height: 14px;
@@ -30,7 +30,7 @@ img{max-width: 100%;}
 
 .relative{position: relative; }
 .left-logo{width: 700px; height:632px; position: absolute; left: 0; top: 0; background: url(../images/header-graphics2.png) no-repeat; 
-z-index: 222; background-size: covered; background-size: 80%}
+z-index: 1; background-size: covered; background-size: 80%}
 
 .left-logo:after {
     content: '';
@@ -65,11 +65,10 @@ z-index: 222; background-size: covered; background-size: 80%}
 
 .item{position: relative;}
 .banner-graphics{position: absolute; bottom: 0; height: 84px; left: 0; right: 0; top: -60px; text-align: center;}
-.bodypart{position: relative;}
+.bodypart{position: relative; z-index: 999;}
 /*.left-menu{width: 130px; height: 904px; position: fixed; left: 0; top: 30%; z-index: 7777;  padding-left: 2%}*/
 
-.left-menu{width: 130px; height: 700px; position: absolute; left: 2%; top: 30%; z-index: 8888;  padding-left: 0}
-
+.left-menu{width: 130px; height: 700px; position: absolute; left: 2%; top: 30%; z-index: 9999; padding-left: 0}
 
 
 .social-media{margin: 0; padding: 24px 0 0; position: absolute; right: 0; top: 0; z-index: 7777;}
@@ -287,7 +286,7 @@ z-index: 9999;
 }
 
 .lft-menu-btn{width: 19px; height: 83px; position: fixed; left: 0;
-top: 25%; background: #EF9433; z-index: 8888; text-align: center;
+top: 25%; background: #EF9433; z-index: 8889; text-align: center;
 display: none;
 }
 
@@ -370,28 +369,26 @@ padding-right: 34px;}
 
 @media (max-width: 2500px) {
 
-	.banner{text-align: center; /*height: 642px;*/ }
+	.banner{text-align: center;  }
 
 }
 
 
 @media (max-width: 1300px) {
 
-	.banner{text-align: center; /*height: 642px;*/overflow: hidden; }
-	.left-logo{width: 43%; background-size: 100%;}
+	.banner{text-align: center;overflow: hidden; }
+	/*.left-logo{width: 43%; background-size: 100%;}*/
 
 
 	.header-top{height: 26px; position: absolute; top: 0; left: 15%; z-index: 7777; background: url(../images/header-top.png) no-repeat; width: 71%;}
-.order-now {
-    width: 239px;
-    height: 14px;
-    position: absolute;
-    top: 7px;
-    left: 16%;
-    z-index: 333;
-}
-
-
+    .order-now {
+        width: 239px;
+        height: 14px;
+        position: absolute;
+        top: 7px;
+        left: 16%;
+        z-index: 333;
+    }
 }
 
 
@@ -448,7 +445,7 @@ padding-right: 34px;}
 .social-media ul li{width: 38px;}
 .order-now{top: -3px; width: 123px; left: 20%;}
 .first-left{padding-top: 0;}
-.left-menu{width: 19%; position: fixed; top: 5%; z-index: 8888;}
+.left-menu{width: 19%; position: fixed; top: 5%; z-index: 8889;}
 .grand-junction{width: 56%; padding: 9px 0; font-size: 18px;}
 .grand-frutia{width: 52%; padding: 9px 0; font-size: 18px;}
 .location-pop .close{top: -6px; right: -6px; width: 32px; height: 32px; z-index: 9999;}
@@ -472,25 +469,27 @@ padding-right: 34px;}
 .address p.add{padding-left: 0;}
 .map-area{background-size: 100%;}
 .bear-month{padding-top: 0;}
-.menu-area ul li:last-child{transform: rotate(-90deg)}
+.menu-area ul li:last-child{
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin: -50px 0;
+}
 .menu-area ul{margin-bottom: 0;}
 
 .left-menu{display: none;}
 .lft-menu-btn{display: block;}
-.menu-area ul li{width: 100%;}
+
+.menu-area ul li:last-child img {
+    width: auto;
+    margin: auto;
+    transform: rotate(-90deg);
+}
 .left-logo::after{background: none;}
 .menu-section-main h2{z-index: 8888;}
 
 }
 
-
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)  
-{
-.left-menu{top: 14%;}
-
-}
 
 
 
