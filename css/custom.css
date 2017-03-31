@@ -15,16 +15,23 @@
 	display: none;
 }
 
-.aboutus .banner-graphics {
+.aboutus{border-top: 10px solid #EEBD43;}
+
+/*.aboutus .banner-graphics {
     top: -80px;
     border-bottom: 10px solid #eebd43;
     height: 90px;
     left: 110px;	
-}
+}*/
 
-.aboutus .content{
+/*.aboutus .content{
 	padding: 20px 200px;
 	margin: 50px 0;
+}*/
+
+.aboutus .content{
+	padding: 70px 0;
+	
 }
 
 .aboutus .content h2{
@@ -38,9 +45,9 @@
     background: url(../images/feedback_bar.png) no-repeat;
 }
 
-.feedback .banner-graphics {
+/*.feedback .banner-graphics {
     border-bottom: 10px solid #989b42;
-}
+}*/
 
 .feedback .content p span{
 	color: #989b42;
@@ -110,6 +117,10 @@
 	    padding: 20px 50px;
 	    margin: 20px 0;
 	}
+
+	.about-page h2 {
+	    top: -24px;
+	}
 }
 
 @media screen and (max-width: 767px) {
@@ -148,6 +159,6 @@
 
 @media screen and (max-width: 480px) {
 	.aboutus .content {
-	    padding: 20px;
+	    padding: 50px 20px;
 	}
 }
