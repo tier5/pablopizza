@@ -2,3 +2,7 @@ V1.0 Released to design_dev
 	1) Psd to html conversion for home page
 V2.0 Released to design_dev
 	1) About page, feedback page, Menu page, home page html
+V3.0 Released to design_dev
+	1) Partners.html new page
+	2) Changed logo from new psd
+	3) Added new tag in banner
