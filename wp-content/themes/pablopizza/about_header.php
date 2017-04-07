@@ -111,7 +111,10 @@
                  <?php
                 $c = 0;
                 $class = '';
-                if(is_page( 'feedback-page' )){ query_posts('category_name=feedback-banner&showposts=4');}else{ query_posts('category_name=about-banner&showposts=4');}
+                if(is_page( 'feedback-page' )){ query_posts('category_name=feedback-banner&showposts=4');}
+                elseif(is_page( 'about-us' )){ query_posts('category_name=about-banner&showposts=4');}
+                elseif(is_page( 'partnars' )){ query_posts('category_name=partnars-banner&showposts=4');}
+                
                
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
                     $c++;
