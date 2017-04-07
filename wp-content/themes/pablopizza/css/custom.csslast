@@ -31,7 +31,7 @@
 
 .aboutus .content{
 	padding: 70px 0;
-	
+	text-align: left;
 }
 
 .aboutus .content h2{
@@ -85,6 +85,7 @@
     letter-spacing: 1px;
     border-radius: 5px;
     transition: 0.5s;
+    float: right;
 }
 
 .feedback form input[type='submit']:hover{

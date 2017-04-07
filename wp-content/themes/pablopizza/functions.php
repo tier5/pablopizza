@@ -535,6 +535,65 @@ function twentyseventeen_post_thumbnail_sizes_attr( $attr, $attachment, $size ) 
 }
 add_filter( 'wp_get_attachment_image_attributes', 'twentyseventeen_post_thumbnail_sizes_attr', 10, 3 );
 
+function custom_post_type2() {
+
+// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x( 'Partnars', 'Post Type General Name', 'twentyseventeen' ),
+		'singular_name'       => _x( 'Partnar', 'Post Type Singular Name', 'twentyseventeen' ),
+		'menu_name'           => __( 'Partnars', 'twentyseventeen' ),
+		'parent_item_colon'   => __( 'Parent Partnar', 'twentyseventeen' ),
+		'all_items'           => __( 'All Partnars', 'twentyseventeen' ),
+		'view_item'           => __( 'View Partnar', 'twentyseventeen' ),
+		'add_new_item'        => __( 'Add New Partnar', 'twentyseventeen' ),
+		'add_new'             => __( 'Add New Partnar', 'twentyseventeen' ),
+		'edit_item'           => __( 'Edit Partnar', 'twentyseventeen' ),
+		'update_item'         => __( 'Update Partnar', 'twentyseventeen' ),
+		'search_items'        => __( 'Search Partnar', 'twentyseventeen' ),
+		'not_found'           => __( 'Not Found', 'twentyseventeen' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'twentyseventeen' ),
+	);
+	
+// Set other options for Custom Post Type
+	
+	$args = array(
+		'label'               => __( 'partnars', 'twentyseventeen' ),
+		'description'         => __( 'partnars details', 'twentyseventeen' ),
+		'labels'              => $labels,
+		// Features this CPT supports in Post Editor
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		//'taxonomies'          => array( 'genres' ),
+		'taxonomies'          => array( 'category' ),
+		/* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/	
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	// Registering your Custom Post Type
+	register_post_type( 'partnars', $args );
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+
+add_action( 'init', 'custom_post_type2', 0 );
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
