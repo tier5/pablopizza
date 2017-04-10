@@ -205,27 +205,21 @@ get_header(); ?>
                                     <div class="tab-content">
                                         <div id="home" class="tab-pane fade in active">
 
-                                            <p>Pablo's Pizza Grand Junction is the original Pablo's and is situated in a historical building amidst the quaint shops, hotels and other restaurants on the tree-lined Main Street. Choose from dozens of specialty pizzas, create your own masterpiece or choose a classic. </p>
-                                            <br>
-                                            <p>
-                                                Don't forget to Join Our Club for coupons via email, Facebook, or text!
-                                            </p>
+                                           <?php $value = get_field( "about", 6 ); echo $value;?>
                                         </div>
                                         <div id="menu1" class="tab-pane fade">
 
-                                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            <?php $value2 = get_field( "hours", 6 ); echo $value2;?>
                                         </div>
                                         <div id="menu2" class="tab-pane fade">
 
-                                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                                           <?php $value3 = get_field( "philo", 6 ); echo $value3;?>
                                         </div>
                                         <div id="menu3" class="tab-pane fade">
-
-                                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                            <?php $value4 = get_field( "owners", 6 ); echo $value4;?>
                                         </div>
                                         <div id="menu4" class="tab-pane fade">
-
-                                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                                            <?php $value5 = get_field( "did_you_know", 6 ); echo $value5;?>
                                         </div>
                                     </div>
 
@@ -257,25 +251,37 @@ get_header(); ?>
                             <h2>LOCATiON</h2>
                             <div class="location-main">
                                 <div class="col-md-6 col-sm-12">
+                                    <?php $args = array(
+                                                    'post_type' => 'locations',
+                                                    'posts_per_page' => 4,
+                                                    'order' => 'ASC'
+                                                    // Several more arguments could go here. Last one without a comma.
+                                                );
+                                // Query the posts:
+                                $obituary_query = new WP_Query($args);
+                                // Loop through the obituaries:
+                                while ($obituary_query->have_posts()) : $obituary_query->the_post();
+                                $thumb_id = get_post_thumbnail_id();
+                                $thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);
+                                 ?>
                                     <div class="address">
-                                        <h3>Grand Junction</h3>
+                                        <h3><?php the_title();?></h3>
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6">
                                                 <p class="add">
-                                                    319 Main Street,
-                                                    <br>8150(970) 255-8879
+                                                    <?php the_content();?>
                                                 </p>
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <p>
                                                     HOURS:
-                                                    <br> Sun - Thurs 11a - 8:30p
-                                                    <br> Fri - Sat 11a - 9p
+                                                    <?php the_field('hours'); ?>
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="address address-second">
+                                    <?php endwhile; wp_reset_postdata();?>
+                                    <!--<div class="address address-second">
                                         <h3>Fruita</h3>
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6">
@@ -292,7 +298,7 @@ get_header(); ?>
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>

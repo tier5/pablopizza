@@ -256,7 +256,7 @@ margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63p
 .address h3{background: url(images/red-arrow.png) no-repeat left; padding-left: 20px; margin: 0; color: #2d2d2d; margin-bottom: 12px;}
 .address p{ color: #2d2d2d;}
 .address p.add{padding-left: 20px;}
-.address{border-bottom: 1px solid #bcbcbc; padding-bottom: 20px;}
+.address{border-bottom: 1px solid #bcbcbc; padding-bottom: 20px;padding-top: 20px;}
 .address-second{border-bottom: none; padding-top: 35px;}
 .location-main{padding-top: 96px;}
 
