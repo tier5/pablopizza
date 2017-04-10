@@ -612,6 +612,7 @@ function custom_post_type2() {
 */
 
 add_action( 'init', 'custom_post_type2', 0 );
+
 function custom_post_type3() {
 
 // Set UI labels for Custom Post Type
