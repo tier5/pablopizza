@@ -21,48 +21,62 @@
                                 </a>
                             </div>
                             <div class="menu-section-main-top">
-                                <h3>TASTE THE DiFFERENCE WiTH FANTASTiC CULiNARY CREATION</h3>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                </p>
-                                <p>
-                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                                </p>
-                                <p>
-                                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.
-
-                                </p>
+                                <?php while ( have_posts() ) : the_post(); ?> <!--Because the_content() works only inside a WP Loop -->
+                                <?php the_content(); ?> <!-- Page Content -->
+                                <?php
+                                endwhile; //resetting the page loop
+                                wp_reset_query(); //resetting the page query
+                                ?>
                             </div>
-                            <div class="accordian-block">
-                                <h4>PiZZA</h4>
+                            <?php $terms = get_terms( 'menu categories' );
+                                    if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
+                                       $count='0';
+                                        foreach ( $terms as $term ) {?>
+                                            <div class="accordian-block">
+
+                                <h4><?php echo $term->name; ?></h4>
                                 <p>
-                                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.
+                                    <?php echo $term->description; ?>
                                 </p>
                                 <div class="dish-type">VEGETARiAN</div>
 
-                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo">VIEW THE PiZZAS</span>
+                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo<?php  if($count=='0'){echo '';}else{echo $count;}?>">VIEW THE PiZZAS</span>
 
-                                <div id="demo" class="collapse">
+                                <div id="demo<?php  if($count=='0'){echo '';}else{echo $count;}?>" class="collapse">
                                     <div class="common-hide">
+                                        <?php $posts_array = get_posts(
+                                                array(
+                                                    'posts_per_page' => -1,
+                                                    'post_type' => 'menu',
+                                                    'tax_query' => array(
+                                                        array(
+                                                            'taxonomy' => 'menu categories',
+                                                            'field' => 'term_id',
+                                                            'terms' => $term->term_id,
+                                                        )
+                                                    )
+                                                )
+
+                                            );
+                                            print_r( $posts_array ); 
+                                            foreach ( $posts_array as $newpost ) {?>
                                         <div class="item-segrication">
-                                            <h3><span>THE SANTA FE WAY</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                            <h3><span><a href="<?php echo get_permalink( $newpost->ID )?>"><?php echo $newpost->post_title;?></a></span></h3> <?php echo $newpost->post_content;?>
                                         </div>
-                                        <div class="item-segrication">
-                                            <h3><span>UNiCORN FORCE</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>THE COWBOY</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>POPEYE'S PASSiON</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>PUNK'S PESTO MANIA</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
+                                        <?php } ?>
+                                        
                                     </div>
                                 </div>
                             </div>
-                            <div class="accordian-block">
+
+                                       <?php  $count++;}
+
+                                       
+                                        
+                                    }
+                                ?>
+                            
+                            <!--<div class="accordian-block">
                                 <h4>SALADS</h4>
                                 <p>
                                     leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.
@@ -148,7 +162,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </div>
                 </div>
