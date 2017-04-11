@@ -22,7 +22,7 @@
 <body>
     <header>
         <div class="left-menu">
-            <ul>
+             <ul>
                 <li>
                     <a href="#">
                         <img src="<?php echo get_template_directory_uri();?>/images/grandjunction.png" alt="img">
@@ -39,7 +39,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="about.html" class="about-list">
+                    <a href="<?php echo site_url();?>/about-us" class="about-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/aboutus.png" alt="img">
                     </a>
                 </li>
@@ -54,7 +54,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="menuFeedback.html" class="feedback-list">
+                    <a href="<?php echo site_url();?>/feedback" class="feedback-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/feedback.png" alt="img">
                     </a>
                 </li>
@@ -86,7 +86,7 @@
 
         <div class="left-logo">
             <div class="logo">
-                <a href="index.html">
+                <a href="<?php echo site_url();?>">
                     <img src="<?php echo get_template_directory_uri();?>/images/pabalo.png" alt="img">
                 </a>
             </div>

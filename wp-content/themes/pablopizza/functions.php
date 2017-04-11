@@ -673,6 +673,76 @@ function custom_post_type3() {
 
 add_action( 'init', 'custom_post_type3', 0 );
 
+
+function custom_post_type4() {
+
+// Set UI labels for Custom Post Type
+	$labels = array(
+		'name'                => _x( 'MENU', 'Post Type General Name', 'twentyseventeen' ),
+		'singular_name'       => _x( 'MENU', 'Post Type Singular Name', 'twentyseventeen' ),
+		'menu_name'           => __( 'MENU', 'twentyseventeen' ),
+		'parent_item_colon'   => __( 'Parent MENU', 'twentyseventeen' ),
+		'all_items'           => __( 'All MENU', 'twentyseventeen' ),
+		'view_item'           => __( 'View MENU', 'twentyseventeen' ),
+		'add_new_item'        => __( 'Add New MENU', 'twentyseventeen' ),
+		'add_new'             => __( 'Add New MENU', 'twentyseventeen' ),
+		'edit_item'           => __( 'Edit MENU', 'twentyseventeen' ),
+		'update_item'         => __( 'Update MENU', 'twentyseventeen' ),
+		'search_items'        => __( 'Search MENU', 'twentyseventeen' ),
+		'not_found'           => __( 'Not Found', 'twentyseventeen' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'twentyseventeen' ),
+	);
+	
+// Set other options for Custom Post Type
+	
+	$args = array(
+		'label'               => __( 'menu', 'twentyseventeen' ),
+		'description'         => __( 'menu', 'twentyseventeen' ),
+		'labels'              => $labels,
+		// Features this CPT supports in Post Editor
+		'supports'            => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'comments', 'revisions', 'custom-fields', ),
+		// You can associate this CPT with a taxonomy or custom taxonomy. 
+		//'taxonomies'          => array( 'genres' ),
+		//'taxonomies'          => array( 'category' ),
+		/* A hierarchical CPT is like Pages and can have
+		* Parent and child items. A non-hierarchical CPT
+		* is like Posts.
+		*/	
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_nav_menus'   => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 5,
+		'can_export'          => true,
+		'has_archive'         => true,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+	);
+	
+	// Registering your Custom Post Type
+	register_post_type( 'menu', $args );
+
+}
+
+/* Hook into the 'init' action so that the function
+* Containing our post type registration is not 
+* unnecessarily executed. 
+*/
+
+add_action( 'init', 'custom_post_type4', 0 );
+
+//add_action( 'init', 'sk_add_category_taxonomy_to_events' );
+//function sk_add_category_taxonomy_to_events() {
+	//register_taxonomy_for_object_type( 'category', 'menu' );
+//}
+add_action( 'init', 'build_taxonomies', 0 );
+ 
+function build_taxonomies() {
+    register_taxonomy( 'menu categories', 'menu', array( 'hierarchical' => true, 'label' => 'Menu Category', 'query_var' => true, 'rewrite' => true ) );
+}
 /**
  * Use front-page.php when Front page displays is set to a static page.
  *
