@@ -21,7 +21,7 @@ img{max-width: 100%;}
   width: 80%;
 }
 .order-now {
-  width: 320px;
+  width: 326px;
   height: 14px;
   position: absolute;
   top: 0;
@@ -45,7 +45,7 @@ z-index: 1; background-size: covered; background-size: 80%}
     top: 60%;
 }
 
-.logo{width: 30%;padding: 20px 0;}
+.logo{width: 33%;padding: 20px 0;}
 .banner img{width: 100%;}
 
 .item{position: relative;}
@@ -53,7 +53,7 @@ z-index: 1; background-size: covered; background-size: 80%}
 .bodypart{position: relative; z-index: 999;}
 /*.left-menu{width: 130px; height: 904px; position: fixed; left: 0; top: 30%; z-index: 7777;  padding-left: 2%}*/
 
-.left-menu{width: 110px; height: 700px; position: absolute; left: 1%; top: 20%; z-index: 9999; padding-left: 0}
+.left-menu{width: 117px; height: 700px; position: absolute; left: 29px; top: 181px; z-index: 9999; padding-left: 0}
 
 
 .social-media{margin: 0; padding: 24px 0 0; position: absolute; right: 0; top: 0; z-index: 7777;}
@@ -95,11 +95,11 @@ background-size: 100%; margin: 0 auto 20px; font-family: 'Chau Philomene One', s
 background-size: 100%;
 }*/
 .heading-graphis {
-    width: 365px;
+    width: 353px;
     height: 81px;
     position: absolute;
-    top: 5px;
-    left: 124px;
+    top: -2px;
+    left: 63px;
     background: url(../images/graphics1.png) no-repeat;
     background-size: 100%;
      -ms-transform: rotate(-1deg); /* IE 9 */
@@ -109,7 +109,7 @@ background-size: 100%;
     text-align: center;
     font-size: 25px;
     color: #fff;
-    padding-top: 34px;
+    padding-top: 31px;
 }
 
 .heading-graphis:after{background: url(../images/graphics-arrow.png) no-repeat; width: 53px; height: 60px; position: absolute; content: '';
@@ -135,7 +135,7 @@ right: -13px;}
 margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63px;}
 .menu-area ul li:last-child:before{position: absolute; content: ''; background: url(../images/arrow-down.png) no-repeat; 
 width: 80px; height: 50px; top: -60px; right: 25px;}
-.menu-area h2{background: url(../images/heading-bg.png) no-repeat; position: absolute; top: 0; left: 20%; width: 310px;
+.menu-area h2{background: url(../images/heading-bg.png) no-repeat; position: absolute; top: 0; left: 0; width: 310px;
 margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63px;}
 
 .community-news {min-height: 200px; 
@@ -250,19 +250,23 @@ footer{background: url(../images/footer.jpg) repeat-x; height: 62px;}
 .location-pop.modal{z-index: 99999;}
 .modal-backdrop{z-index: 88888;}
 
-.location-pop h2{font-size: 48px;}
+.location-pop h2{font-size: 46px; margin-bottom: 31px; margin-top: 53px;}
 
-.location-pop .modal-content{background: url(../images/location-horse.jpg) no-repeat left bottom #262626; background-size: 153px 271px;
- position: relative;
+.location-pop .modal-content{background: url(../images/location-horse.jpg) no-repeat left bottom #262626; background-size: 177px 276px;
+ position: relative; height:  387px;
 }
 /*.location-pop{width: 80%; margin: 0 auto; left: 0; right: 0; bottom: 0; top: 0; position: absolute;}*/
 
+
+.location-pop .modal-body{padding: 15px 15px 15px 88px;}
+
+
 .location-pop .modal-dialog{top: 20%; text-align: center;}
-.grand-junction{background: url(../images/grand-btn.png) no-repeat; width: 53%; border: none; height: auto; margin: 0 auto;
-background-size: 100%; padding: 19px 0; font-size: 33px;
+.grand-junction{background: url(../images/grand-btn.jpg) no-repeat; width: 51%; border: none; height: auto; margin: 0 auto;
+background-size: 100%; padding: 41px 0; font-size: 33px;
 }
-.grand-frutia{background: url(../images/frutia.png) no-repeat; width: 47%; border: none; height: auto; margin: 0 auto;
-background-size: 100%; padding: 19px 0; font-size: 33px;
+.grand-frutia{background: url(../images/frutia.jpg) no-repeat; width: 46%; border: none; height: auto; margin: 0 auto;
+background-size: 100%; padding: 38px 0; font-size: 33px;
 }
 
 .location-pop .close{position: absolute; top: -23px; right: -23px; width: 55px; height: 55px; border-radius: 50%; text-align: center;
@@ -444,10 +448,13 @@ font-size: 24px;
   width: 310px;
 }*/
 
+.banner{max-height: 578px; overflow: hidden;}
+
+
 
 @media (max-width: 2500px) {
 
-	.banner{text-align: center;  }
+	.banner{text-align: center;  max-height: 578px; overflow: hidden;}
 
 }
 
@@ -477,8 +484,8 @@ font-size: 24px;
 }
 @media screen and (min-width: 992px) and (max-width: 1199px) {
   .heading-graphis{
-    top: 14px;
-    left: 65px;
+    top: 1px;
+    left: 49px;
   } 
   .header-top {
     left: 20%;
@@ -515,7 +522,7 @@ font-size: 24px;
 
 .heading-graphis{position: relative; width: 262px; height: auto; padding-top: 21px; font-size: 18px; top: -4px; left: 9px;}
 
-.left-menu{width: 8%;}
+
 .first-step{padding-top: 0;}
 .menu-area h2{position: relative; left: 0;}
 .menu-area ul {padding:41px 0;}
@@ -535,7 +542,7 @@ font-size: 24px;
 
 
 @media (max-width: 768px) {
-
+.left-menu{width: 8%;}
 .menu-area ul li:last-child::before{display: none;}
 /*.left-logo{width: 54%;}*/
 
@@ -555,8 +562,8 @@ font-size: 24px;
 .order-now{top: -3px; width: 123px; left: 20%;}
 .first-left{padding-top: 0;}
 .left-menu{width: 19%; position: fixed; top: 20%; z-index: 8889;}
-.grand-junction{width: 56%; padding: 9px 0; font-size: 18px;}
-.grand-frutia{width: 52%; padding: 9px 0; font-size: 18px;}
+.grand-junction{width: 56%;/* padding: 9px 0;*/ font-size: 18px;}
+.grand-frutia{width: 52%; /*padding: 9px 0;*/ font-size: 18px;}
 .location-pop .close{top: -6px; right: -6px; width: 32px; height: 32px; z-index: 9999;}
 .banner-graphics{display: none;}
 .left-logo:after{background: none;}
@@ -606,14 +613,22 @@ font-size: 24px;
 
 
 
+@media (max-width: 480px) {
 
+.grand-frutia{padding: 30px 0;}
+.grand-junction{padding: 28px 0;}
+.location-pop .modal-content{height: auto;}
+.location-pop .modal-body{padding: 15px;}
+.location-pop .modal-content{background: #262626 url("../images/location-horse.jpg") no-repeat scroll left bottom / 85px 126px}
 
+.location-pop h2 {
+  font-size: 37px;
+  margin-bottom: 31px;
+  margin-top: 14px;
+}
+.logo{width: 29%;}
 
-
-
-
-
-
+}
 
 
 
