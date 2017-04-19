@@ -38,11 +38,14 @@
             <ul>
                 <li>
                     <a href="#">
-                        <img src="<?php echo get_template_directory_uri();?>/images/grandjunction.png" alt="img">
+                        <img class="imggrandjunction" src="<?php echo get_template_directory_uri();?>/images/grandjunction.png" alt="img">
+                    </a>
+                    <a href="#">
+                        <img class="imgfrutia" src="<?php echo get_template_directory_uri();?>/images/fruita-button.png" alt="img">
                     </a>
                 </li>
                 <li>
-                    <a href="menu.html" class="menu-list">
+                    <a href="<?php echo site_url();?>/menu-details/" class="menu-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/menu.png" alt="img">
                     </a>
                 </li>
@@ -62,7 +65,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="joinclub-list">
+                    <a href="javascript:void(0);" class="joinclub-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/join-club.png" alt="img">
                     </a>
                 </li>
@@ -107,34 +110,25 @@
         </div>
 
     </header>
+ <div class="container-fluid">
+    <div class="row">
+    <?php
+            
+    query_posts('category_name=home-page-banner&showposts=1');
+    if ( have_posts() ) : while ( have_posts() ) : the_post();
+        
+        $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
+        $url = $thumb['0'];
+
+        
+      ?>
     <div class="banner">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-            	<?php //echo do_shortcode('[rev_slider alias="home_page"]');?>	
-         <?php
-		        $c = 0;
-		        $class = '';
-		        query_posts('category_name=home-page-banner&showposts=4');
-		        if ( have_posts() ) : while ( have_posts() ) : the_post();
-		            $c++;
-
-		            $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
-		            $url = $thumb['0'];
-
-		            if ( $c == 1 ){ $class = ' active';}else{ $class='';} 
-          ?>
-                 <div class="item <?php echo $class; ?>">
-                    <img src="<?php echo $url;?>" alt="Chania">
-                </div>
-                 <?php
-			        endwhile;endif;
-			        wp_reset_query();
-   		 		?>
-            </div>
-
-            <!-- Left and right controls -->
-
-        </div>
+         <img src="<?php echo $url; ?>" alt="Chania">
 
     </div>
+    <?php
+        endwhile;endif;
+        wp_reset_query();
+    ?>
+    </div>
+</div>   

@@ -28,7 +28,15 @@
                                 wp_reset_query(); //resetting the page query
                                 ?>
                             </div>
-                            <?php $terms = get_terms( 'menu categories' );
+                            <?php 
+
+                            $args = array(
+                                           'posts_per_page' => -1,
+                                            'orderby'           => 'date', 
+                                            'order'             => 'DESC',
+                                            
+                                        );
+                            $terms = get_terms( 'menu categories', $args );
                                     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
                                        $count='0';
                                         foreach ( $terms as $term ) {?>
@@ -48,6 +56,8 @@
                                                 array(
                                                     'posts_per_page' => -1,
                                                     'post_type' => 'menu',
+                                                    'orderby' => 'meta_value',
+                                                    'order'      => 'ASC',
                                                     'tax_query' => array(
                                                         array(
                                                             'taxonomy' => 'menu categories',
@@ -58,10 +68,10 @@
                                                 )
 
                                             );
-                                            print_r( $posts_array ); 
+                                            //print_r( $posts_array ); 
                                             foreach ( $posts_array as $newpost ) {?>
                                         <div class="item-segrication">
-                                            <h3><span><a href="<?php echo get_permalink( $newpost->ID )?>"><?php echo $newpost->post_title;?></a></span></h3> <?php echo $newpost->post_content;?>
+                                            <h3><span><a href="<?php //echo get_permalink( $newpost->ID )?>"><?php echo $newpost->post_title;?></a></span></h3> <?php echo $newpost->post_content;?>
                                         </div>
                                         <?php } ?>
                                         

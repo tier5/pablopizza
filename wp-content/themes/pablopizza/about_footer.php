@@ -8,7 +8,7 @@
                                     <div class="row stay-connected-top">
                                         <div class="col-md-6 col-sm-6">
                                             <h3>INSTAGRAM</h3>
-                                            <div class="row">
+                                            <div class="row"><!-- 
                                                 <div class="col-md-6 col-sm-6 single-pic">
                                                     <img src="<?php echo get_template_directory_uri();?>/images/demo-pic.jpg" alt="img">
                                                 </div>
@@ -22,11 +22,13 @@
                                                     <img src="<?php echo get_template_directory_uri();?>/images/demo-pic.jpg" alt="img">
                                                 </div>
 
-                                            </div>
+                                             -->
+                                                 <?php echo do_shortcode('[instagram-feed]'); ?>
+                                             </div>
                                         </div>
                                         <div class="col-md-6 col-sm-6">
                                             <h3>FACEBOOK</h3>
-                                            <div class="row">
+                                            <!-- <div class="row">
                                                 <div class="col-md-6 col-sm-6 single-pic">
                                                     <img src="<?php echo get_template_directory_uri();?>/images/demo-pic.jpg" alt="img">
                                                 </div>
@@ -40,7 +42,8 @@
                                                     <img src="<?php echo get_template_directory_uri();?>/images/demo-pic.jpg" alt="img">
                                                 </div>
 
-                                            </div>
+                                            </div> -->
+                                             <?php echo do_shortcode('[recent_facebook_posts  number=4]');?>
                                         </div>
                                     </div>
                                 </div>

@@ -1,6 +1,6 @@
 /* About us */
 .aboutus .heading-graphis{
-    background: url(../images/about-head-bg.png) no-repeat;
+    background: url(images/about-head-bg.png) no-repeat;
     width: auto;
     height: auto;
     padding: 10px 150px;
@@ -42,7 +42,7 @@
 /* Feedback */
 
 .feedback .heading-graphis{
-    background: url(../images/feedback_bar.png) no-repeat;
+    background: url(images/feedback_bar.png) no-repeat;
 }
 
 /*.feedback .banner-graphics {

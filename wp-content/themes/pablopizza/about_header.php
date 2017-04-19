@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="menu.html" class="menu-list">
+                    <a href="<?php echo site_url();?>/menu-details/" class="menu-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/menu.png" alt="img">
                     </a>
                 </li>
@@ -104,38 +104,36 @@
             </div>
         </div>
     </div> -->
-        <div class="banner">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                 <?php
-                $c = 0;
-                $class = '';
-                if(is_page( 'feedback-page' )){ query_posts('category_name=feedback-banner&showposts=4');}
-                elseif(is_page( 'about-us' )){ query_posts('category_name=about-banner&showposts=4');}
-                elseif(is_page( 'partnars' )){ query_posts('category_name=partnars-banner&showposts=4');}
+
+
+
+        <div class="container-fluid">
+        <div class="row">
+        <?php
+                //$c = 0;
+                //$class = '';
+                if(is_page( 'feedback-page' )){ query_posts('category_name=feedback-banner&showposts=1');}
+                elseif(is_page( 'about-us' )){ query_posts('category_name=about-banner&showposts=1');}
+                elseif(is_page( 'partners' )){ query_posts('category_name=partnars-banner&showposts=1&order=ASC');}
                 
                
                 if ( have_posts() ) : while ( have_posts() ) : the_post();
-                    $c++;
+                    //$c++;
 
                     $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );
                     $url = $thumb['0'];
 
-                    if ( $c == 1 ){ $class = ' active';}else{ $class='';} 
+                  /*  if ( $c == 1 ){ $class = ' active';}else{ $class='';} */
           ?>
-                 <div class="item <?php echo $class; ?>">
-                    <img src="<?php echo $url;?>" alt="Chania">
-                </div>
-                 <?php
+            <div class="banner">
+                <img src="<?php echo $url;?>" alt="banner-iamge" class="img-responsive">
+            </div>
+           <?php
                     endwhile;endif;
                     wp_reset_query();
-                ?>
-            </div>
-
-            <!-- Left and right controls -->
-
+                ?> 
         </div>
+    </div>
 
 
     

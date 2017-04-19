@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-
+<?php wp_head();?>
 <body>
     <header>
         <div class="left-menu">
@@ -29,7 +29,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="menu.html" class="menu-list">
+                    <a href="<?php echo site_url();?>/menu-details/" class="menu-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/menu.png" alt="img">
                     </a>
                 </li>

@@ -3,10 +3,10 @@
 *Template Name:Home Page
 */
 get_header(); ?>
- <div class="bodypart">
+ <div class="bodypart homepage">
         <div class="container">
             <div class="row">
-                <div class="col-md-12 col-sm-12">
+                <div class="col-md-10 col-sm-10 col-sm-offset-1">
                     <div class="banner-graphics">
                         <img src="<?php echo get_template_directory_uri();?>/images/header-graphics.png" alt="img">
                     </div>
@@ -16,11 +16,15 @@ get_header(); ?>
                     <div class="row first-step">
                         <div class="col-md-5 col-sm-7 col-md-offset-1">
                             <div class="first-left">
-                                <h2>Curry On My Wayward Son</h2>
-                                <p>
-                                    Our freshly made dough topped with white sauce, mozzarella, chicken and tri-colored cauliflower marinated in a Thai Red curry sauce, red bell peppers, pineapple, green onions.
-                                </p>
-                                <p class="valid-btn">Valid Thru: 3/13</p>
+                                
+                                <?php if( get_field('curry_on_my_wayward_son_title') ): ?>
+                                    <h2><?php the_field('curry_on_my_wayward_son_title'); ?></h2>
+                                <?php endif; ?>
+                                
+                                <?php if( get_field('curry_on_my_wayward_son_content') ): ?>
+                                    <p><?php the_field('curry_on_my_wayward_son_content'); ?></p>
+                                <?php endif; ?>
+                                <p class="valid-btn">Valid Thru: <?php the_field('valid_thru'); ?></p>
                                 <br>
                                 <br>
 
@@ -30,8 +34,13 @@ get_header(); ?>
                                             <img src="<?php echo get_template_directory_uri();?>/images/can.png" alt="img">
                                         </div>
                                         <div class="col-md-10 col-sm-10">
-                                            <h3>BEER OF THE MONTH</h3>
-                                            <h4>3rd Eye Pale!____$3</h4>
+                                             
+                                            <?php if( get_field('beer_of_the_month') ): ?>
+                                                <h3><?php the_field('beer_of_the_month'); ?></h3>
+                                            <?php endif; ?>
+                                                        <?php if( get_field('3rd_eye_pale!____$3') ): ?>
+                                                <h4><?php the_field('3rd_eye_pale!____$3'); ?></h4>
+                                            <?php endif; ?>
                                         </div>
 
                                     </div>
@@ -40,7 +49,10 @@ get_header(); ?>
 
                         </div>
                         <div class="col-md-6 col-sm-4 pizza-holder">
-                            <img src="<?php echo get_template_directory_uri();?>/images/pizza.jpg" alt="img">
+                        <?php
+                            $image = get_field('curry_on_my_wayward_son_image');
+                        ?>
+                            <img src="<?php echo $image['url']; ?>" alt="img">
                         </div>
 
                     </div>
@@ -52,24 +64,28 @@ get_header(); ?>
                 <div class="row">
                     <div class="col-md-10 col-sm-10 col-sm-offset-1">
                         <h2>THE MENU</h2>
-                        <ul>
+                       
+                        <?php if( have_rows('the_menu') ): ?>
+                             <ul>
+                            <?php while( have_rows('the_menu') ): the_row(); 
+
+                            $image = get_sub_field('image');
+                            
+                            $link = get_sub_field('link');
+
+                            ?>
                             <li>
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/appe.jpg" alt="img"></a>
+                                <a href="<?php echo $link; ?>"><img src="<?php echo $image['url']; ?>" alt="img"></a>
                             </li>
-                            <li>
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/thepizza.jpg" alt="img"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/salads.jpg" alt="img"></a>
-                            </li>
-                            <li>
-                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/kids.jpg" alt="img"></a>
-                            </li>
+                            <?php endwhile; ?>
                             <li>
                                 <a href="<?php echo site_url()?>/menu-details"><img src="<?php echo get_template_directory_uri();?>/images/view-full-menu.jpg" alt="img"></a>
                             </li>
 
-                        </ul>
+                            </ul>
+                        <?php endif; ?>  
+                          
+                        
                     </div>
                 </div>
             </div>
@@ -235,7 +251,10 @@ get_header(); ?>
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <div class="about-graphics">
-                                    <img src="<?php echo get_template_directory_uri();?>/images/about-graphics.png" alt="img">
+                                <?php
+                                   $image1 = get_field('about_pablos');
+                                ?>
+                                    <img src="<?php echo $image1['url']?>" alt="img">
                                 </div>
                             </div>
                         </div>
@@ -274,7 +293,7 @@ get_header(); ?>
                                             </div>
                                             <div class="col-md-6 col-sm-6">
                                                 <p>
-                                                    HOURS:
+                                                    HOURS:<br/>
                                                     <?php the_field('hours'); ?>
                                                 </p>
                                             </div>

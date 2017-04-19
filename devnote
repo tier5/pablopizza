@@ -10,3 +10,9 @@ Version 1.3 Released
     1. Changes for home page location section, home page footer, home page about section.
     2. Create new menu details page template.
 
+Home Modification V1.0 stable released
+	Modified home template
+	Implemented mailchimp campaign for join club section
+	Fetched instagram and facebook latest four feeds
+	Made most of the home page section to dynamic
+	worked on about us, feedback and menu page
