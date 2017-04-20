@@ -790,3 +790,26 @@ add_filter('wpcf7_form_elements', function($content) {
 });
 
 
+function custom_loginlogo() {
+echo '<style type="text/css">
+h1 a {background-image: url('.get_bloginfo('template_directory').'/images/pabalo.png) !important; }
+</style>';
+}
+add_action('login_head', 'custom_loginlogo');
+
+
+/**
+ * Custom admin login header link
+ */
+function custom_login_url() {
+    return home_url( '/' );
+}
+add_filter( 'login_headerurl', 'custom_login_url' );
+
+/**
+ * Custom admin login header link alt text
+ */
+function custom_login_title() {
+    return get_option( 'blogname' );
+}
+add_filter( 'login_headertitle', 'custom_login_title' );
