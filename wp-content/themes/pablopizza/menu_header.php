@@ -21,79 +21,9 @@
 <?php wp_head();?>
 <body>
     <header>
-        <div class="left-menu">
-             <ul>
-                <li>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri();?>/images/grandjunction.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo site_url();?>/menu-details/" class="menu-list">
-                        <img src="<?php echo get_template_directory_uri();?>/images/menu.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="news-list">
-                        <img src="<?php echo get_template_directory_uri();?>/images/news.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo site_url();?>/about-us" class="about-list">
-                        <img src="<?php echo get_template_directory_uri();?>/images/aboutus.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="location-list">
-                        <img src="<?php echo get_template_directory_uri();?>/images/location.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="joinclub-list">
-                        <img src="<?php echo get_template_directory_uri();?>/images/join-club.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="<?php echo site_url();?>/feedback" class="feedback-list">
-                        <img src="<?php echo get_template_directory_uri();?>/images/feedback.png" alt="img">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="bottom-border">
-                        <img src="<?php echo get_template_directory_uri();?>/images/bottom-border.png" alt="img">
-                    </a>
-                </li>
-
-            </ul>
-        </div>
-        <div class="header-top">
-            <!--  <img src="images/header-top.png" alt="img"> -->
-
-            <div class="relative">
-                <div class="social-media">
-                   <?php if ( is_active_sidebar( 'sidebar-4' ) ) : ?>
-                            <?php dynamic_sidebar( 'sidebar-4' ); ?>                        
-                    <?php endif; ?>
-                </div>
-            </div>
-
-        </div>
-        <div class="order-now">
-            <a href="#">
-                <img src="<?php echo get_template_directory_uri();?>/images/order-now.png" alt="img" class="img-responsive">
-            </a>
-        </div>
-
-        <div class="left-logo">
-            <div class="logo">
-                <a href="<?php echo site_url();?>">
-                    <img src="<?php echo get_template_directory_uri();?>/images/pabalo.png" alt="img">
-                </a>
-            </div>
-
-        </div>
-
+        <?php include('parts/menu-parts.php'); ?>
     </header>
+    
     <div class="container-fluid">
         <div class="row">
             <div class="banner">

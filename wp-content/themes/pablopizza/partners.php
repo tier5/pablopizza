@@ -8,7 +8,7 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                <div class="col-md-10 col-sm-10 col-sm-offset-2">
                     <div class="banner-graphics">
                         <img src="<?php echo get_template_directory_uri();?>/images/header-graphics.png" alt="img">
                     </div>
@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="ourpartners relative">
-                        <div class="col-md-11 col-sm-10 col-sm-offset-1">
+                        <div class="col-md-11 col-sm-11 col-sm-offset-1">
                             <div class="row">
                                 <?php $args = array(
                                                     'post_type' => 'partnars',
@@ -51,33 +51,7 @@
                                     </div>
                                 </div>
                             <?php endwhile; wp_reset_postdata();?>
-                                <!--<div class="col-md-3 col-sm-3">
-                                    <div class="image">
-                                        <img src="images/grey_box.png" alt="img" class="img-responsive">
-                                    </div>
-                                    <div class="text">
-                                        <h4>NAME OF PARTNER</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="image">
-                                        <img src="images/grey_box.png" alt="img" class="img-responsive">
-                                    </div>
-                                    <div class="text">
-                                        <h4>NAME OF PARTNER</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="image">
-                                        <img src="images/grey_box.png" alt="img" class="img-responsive">
-                                    </div>
-                                    <div class="text">
-                                        <h4>NAME OF PARTNER</h4>
-                                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled</p>
-                                    </div>
-                                </div>-->
+                                
 
                             </div>
                         </div>
@@ -91,29 +65,34 @@
         		<div class="menu-area">
 		            <div class="container">
 		                <div class="row">
-		                    <div class="col-md-10 col-sm-10 col-sm-offset-1">
+		                    <div class="col-md-10 col-sm-10 col-sm-offset-2">
 		                        <h2>THE MENU</h2>
-		                        <ul>
-		                            <li>
-		                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/appe.jpg" alt="img"></a>
-		                            </li>
-		                            <li>
-		                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/thepizza.jpg" alt="img"></a>
-		                            </li>
-		                            <li>
-		                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/salads.jpg" alt="img"></a>
-		                            </li>
-		                            <li>
-		                                <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/kids.jpg" alt="img"></a>
-		                            </li>
-		                            <li>
-		                               <a href="<?php echo site_url()?>/menu-details"><img src="<?php echo get_template_directory_uri();?>/images/view-full-menu.jpg" alt="img"></a>
-		                            </li>
+		                         <?php if( have_rows('the_menu') ): ?>
+                                     <ul>
+                                    <?php while( have_rows('the_menu') ): the_row(); 
 
-		                        </ul>
+                                    $image = get_sub_field('image');
+                                    
+                                    $link = get_sub_field('link');
+
+                                    ?>
+                                    <li>
+                                        <a href="<?php echo $link; ?>"><img src="<?php echo $image['url']; ?>" alt="img"></a>
+                                    </li>
+                                    <?php endwhile; ?>
+                                    <li>
+                                        <a href="<?php echo site_url()?>/menu-details"><img src="<?php echo get_template_directory_uri();?>/images/view-full-menu.jpg" alt="img"></a>
+                                    </li>
+
+                                    </ul>
+                                <?php endif; ?>
 		                    </div>
 		                </div>
 		            </div>
-		        </div>
+		        </div>               
         	</div>
+              <div class="community-news">
+                    <?php include('parts/comunity.php') ?>
+                </div>
+            
             <?php include 'about_footer.php'; ?>

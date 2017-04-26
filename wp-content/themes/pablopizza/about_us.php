@@ -7,7 +7,7 @@
  <div class="bodypart aboutus">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                <div class="col-md-10 col-sm-10 col-sm-offset-2">
                 <div class="banner-graphics">
                         <img src="<?php echo get_template_directory_uri();?>/images/header-graphics.png" alt="img">
                         </div>
@@ -29,26 +29,9 @@
                 <div class="menu-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                            <div class="col-md-10 col-sm-10 col-sm-offset-2">
                                 <h2>THE MENU</h2>
-                                <!-- <ul>
-                                    <li>
-                                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/appe.jpg" alt="img"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/thepizza.jpg" alt="img"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/salads.jpg" alt="img"></a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><img src="<?php echo get_template_directory_uri();?>/images/kids.jpg" alt="img"></a>
-                                    </li>
-                                    <li>
-                                        <a href="<?php echo site_url()?>/menu-details"><img src="<?php echo get_template_directory_uri();?>/images/view-full-menu.jpg" alt="img"></a>
-                                    </li>
-
-                                </ul> -->
+                                
                                                        
                         <?php if( have_rows('the_menu') ): ?>
                              <ul>
@@ -74,4 +57,7 @@
                     </div>
                 </div>
             </div>
+            <div class="community-news">
+                    <?php include('parts/comunity.php') ?>
+                </div>
         <?php include 'about_footer.php'; ?>

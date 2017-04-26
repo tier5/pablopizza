@@ -48,16 +48,18 @@ Use it to make something cool, have fun, and share what you've learned with othe
 1.0 Normalize
 Styles based on Normalize v5.0.0 @link https://github.com/necolas/normalize.css
 --------------------------------------------------------------*/
+
+
 @import url('https://fonts.googleapis.com/css?family=Chau+Philomene+One:400,400i');
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 /*font-family: 'Chau Philomene One', sans-serif;*/
 /*font-family: 'Fjalla One', sans-serif;*/
 
-h1,h2,h3,h4,h5,h6{font-family: 'Chau Philomene One', sans-serif; color: #fff;}
+h1,h2,h3,h4,h5,h6{font-family: 'Chau Philomene One', sans-serif; color: #fff; letter-spacing: 1px;}
 
 
-body{margin: 0; padding: 0; background: #141413; font-family: 'Fjalla One', sans-serif; color: #fff;}
+body{margin: 0; padding: 0; background: #141413; letter-spacing: 1px; font-family: 'Fjalla One', sans-serif; color: #fff;}
 img{max-width: 100%;}
 /*header{position: relative;}*/
 .header-top{
@@ -99,11 +101,12 @@ z-index: 1; background-size: covered; background-size: 80%}
 .banner img{width: 100%;}
 
 .item{position: relative;}
-.banner-graphics{position: absolute; bottom: 0; height: 84px; left: 0; right: 0; top: -60px; text-align: center;}
+.banner-graphics{position: absolute; bottom: 0; height: 84px; left: 0; right: 0; top: -89px; text-align: center;}
+.homepage .banner-graphics{ top: -76px; }
 .bodypart{position: relative; z-index: 999;}
 /*.left-menu{width: 130px; height: 904px; position: fixed; left: 0; top: 30%; z-index: 7777;  padding-left: 2%}*/
 
-.left-menu{width: 117px; height: 700px; position: absolute; left: 29px; top: 181px; z-index: 9999; padding-left: 0}
+.left-menu{width: 12%; /*height: 700px;*/ position: absolute; left: 29px; top: 181px; z-index: 9999; padding-left: 0}
 
 
 .social-media{margin: 0; padding: 24px 0 0; position: absolute; right: 0; top: 0; z-index: 7777;}
@@ -112,8 +115,51 @@ z-index: 1; background-size: covered; background-size: 80%}
 .social-media ul li a{text-decoration: none;}
 
 .left-menu ul{margin: 0; padding: 0;}
-.left-menu ul li{margin: 0; padding: 0; list-style: none;}
+.left-menu ul li:first-child{ background: none; padding: 0;}
+.left-menu ul li{
+    background: url(images/menu-bg2.png) no-repeat;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    background-size: 100% 100%;
+    padding: 20px 0;
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    margin-top: -10px; 
+}
+.left-menu ul li img{ margin: 10px auto;height: 65px;width: 60px;}
+.left-menu ul li:first-child img{margin: 0; height: auto; width: auto;}
+.left-menu ul li a { 
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+.left-menu ul li:first-child a{
+    height: auto;
+    width: 100%;
+}
+.left-menu ul li span{ display: block; }
+.left-menu ul li a:hover, .left-menu ul li.active a {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.05);
+    display: inline-block;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
 
+.left-menu ul li:first-child a:hover {
+    width: auto;
+    height: auto;
+  }
+
+.bottom-border-img{width: 100%; margin-top: -10px;}
 .menu-list{margin-top: -4px; display: block;}
 .news-list{margin-top: -5px; display: block;}
 .about-list{margin-top: -5px; display: block;}
@@ -165,21 +211,38 @@ background-size: 100%;
 .heading-graphis:after{background: url(images/graphics-arrow.png) no-repeat; width: 53px; height: 60px; position: absolute; content: '';
 right: -13px;}
 .first-step{padding-top: 70px; padding-bottom: 58px;}
-.first-step h2{font-size: 27px;}
+.first-step h2{font-size: 30px;}
 
 .first-left{padding-left: 19px; padding-top: 62px;}
 .first-left p{line-height: 24px; letter-spacing: 1px;}
 .valid-btn{background: #e64b21; border-radius: 7px; color: #fff; padding: 4px 15px; display: inline-block;}
 
 .bear-month{padding-top: 30px;}
-.bear-month h3{margin: 0; padding: 0 0 17px; font-size: 19px; background: url(images/heading-graphics.png) repeat-x bottom;}
-.bear-month h4{font-size: 18px; padding-top: 10px;}
-.pizza-holder img{width: 80%;}
+.bear-month h3{margin: 0; padding: 0 0 17px; font-size: 25px; background: url(images/heading-graphics.png) repeat-x bottom;}
+.bear-month h4{font-size: 18px; padding-top: 10px;font-family: 'Fjalla One', sans-serif; color: #fff;}
+.bear-month img{ margin: 0 auto; }
+.pizza-holder img{/*width: 80%;*/}
 
 .menu-area{min-height: 325px; background: url(images/menuarea-graphics.jpg) repeat-x #ededec; position: relative; z-index: 7777;}
-.menu-area ul{text-align: center; padding-top: 120px}
-.menu-area ul li{display: inline-block; list-style: none; width: 162px;}
-.menu-area ul li:last-child{width: 47px; position: relative;}
+.menu-area ul{    padding-left: 0;text-align: center; padding-top: 120px}
+.menu-area ul li{
+  display: inline-block; 
+  list-style: none; 
+  width: 23%;
+  vertical-align: top;
+  background: url("images/menu-box_red.png") no-repeat top center;
+  background-size: 100% 100%; 
+}
+.menu-area ul li:hover{
+  background: url("images/menu-box_blue.png") no-repeat top center;
+  background-size: 100% 100%;
+}
+.menu-area ul li a{
+    display: block;
+    padding: 20px;
+  }
+.menu-area ul li:last-child{width: 50px; position: relative; background: none;}
+.menu-area ul li:last-child a{ padding: 0;}
 .menu-area ul li:last-child img{width: 70%;}
 .menu-area h2{background: url(images/heading-bg.png) no-repeat; position: absolute; top: 0; left: 0; width: 310px;
 margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63px;}
@@ -190,13 +253,13 @@ margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63p
 
 .community-news {min-height: 200px; 
 border-top: 10px solid #493f36; padding-bottom: 124px; position: relative;
-background: url(images/unicorn_updated.png) no-repeat top 47% right -3px; background-size: 30%;
+/*background: url(images/unicorn_updated.png) no-repeat top 47% right -3px; background-size: 30%;*/
 }
 
 
 
 
-.imp-date1{background: url(images/community-graphics.png) no-repeat center top 37%;}
+.imp-date1{background: url(images/community-graphics.png) no-repeat center top 37%;    background-size: 75%;}
 
 
 .community-news h2{background: url(images/community-bg-head.png) no-repeat; position: absolute; top: -1px; left: 0; width: 310px;
@@ -204,10 +267,15 @@ margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63p
 
 .community-area{padding: 100px 0;}
 
-.imp-date{width: 60px; position: absolute; left: 0; top: 130px; z-index: 999;}
+.imp-date{width: 60px; position: absolute; left: 85px; top: 130px; z-index: 999;}
 .imp-date img{width: 85%}
-.whats-new{width: 60px; position: absolute; left: 0; top: 0px;}
+.whats-new{width: 60px; position: absolute; left: 85px; top: 0px;}
 .whats-new img{width: 85%}
+
+.partners .whats-new {
+    width: 57px;
+    left: 0;
+}
 
 .free-dough{border-top: 7px solid #38908e; padding-top: 9px; min-height: 200px;}
 .free-dough h3{
@@ -273,13 +341,13 @@ margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63p
 .stay-connected-top{padding-bottom: 70px;}
 
 .stay-connected-red {
-    border-top: 7px solid #df3426;
+    border-top: 7px solid #e64b21;
     padding-top: 9px;
     /*min-height: 200px;*/
     padding-bottom: 59px;
 }
 .stay-connected-green {
-    border-top: 7px solid #989b42;
+    border-top: 7px solid #71803b;
     padding-top: 9px;
     min-height: 200px;
 }
@@ -300,27 +368,48 @@ footer{background: url(images/footer.jpg) repeat-x; height: 62px;}
 .location-pop.modal{z-index: 99999;}
 .modal-backdrop{z-index: 88888;}
 
-.location-pop h2{font-size: 46px; margin-bottom: 31px; margin-top: 53px;}
+.location-pop h2{
+  font-size: 70px;
+  margin-bottom: 30px;
+}
 
-.location-pop .modal-content{background: url(images/location-horse.jpg) no-repeat left bottom #262626; background-size: 177px 276px;
- position: relative; height:  387px;
+.location-pop .modal-content{background: url(images/unicorn.jpg) no-repeat left bottom #4E4E4E; background-size: 27% 80%; /* background-size: 177px 276px;*/
+ position: relative;
 }
 /*.location-pop{width: 80%; margin: 0 auto; left: 0; right: 0; bottom: 0; top: 0; position: absolute;}*/
 
 
-.location-pop .modal-body{padding: 15px 15px 15px 88px;}
+.location-pop .modal-body{padding: 100px 0;    margin-left: 130px;}
 
 
 .location-pop .modal-dialog{top: 20%; text-align: center;}
-.grand-junction{background: url(images/grand-btn.jpg) no-repeat; width: 51%; border: none; height: auto; margin: 0 auto;
-background-size: 100%; padding: 41px 0; font-size: 33px;
+.grand-junction{
+    font-family: 'Chau Philomene One', sans-serif;
+    background: url(images/button-bg.png) no-repeat;
+    padding: 20px 30px;
+    border: none;
+    height: auto;
+    margin: 0 auto;
+    background-size: 100% 100%;
+    font-size: 40px;
 }
-.grand-frutia{background: url(images/frutia.jpg) no-repeat; width: 46%; border: none; height: auto; margin: 0 auto;
-background-size: 100%; padding: 38px 0; font-size: 33px;
+.grand-frutia{
+    font-family: 'Chau Philomene One', sans-serif;
+    background: url(images/button-bg-green.png) no-repeat;
+    padding: 20px 60px;
+    border: none;
+    height: auto;
+    margin: 10px auto;
+    background-size: 100% 100%;
+    font-size: 40px;
+}
+
+.grand-junction:hover,.grand-frutia:hover{
+    background: none;
 }
 
 .location-pop .close{position: absolute; top: -23px; right: -23px; width: 55px; height: 55px; border-radius: 50%; text-align: center;
-color: #fff; opacity: 1; background: url(images/cross.png) no-repeat center #363636; background-size: 40%;
+color: #fff; opacity: 1; background: url(images/cross.png) no-repeat center #4e4e4e; background-size: 40%;
 z-index: 9999;
 }
 
@@ -347,8 +436,8 @@ display: none;
 color: #fff; opacity: 1; background: url(images/cross.png) no-repeat center #363636; background-size: 40%;
 z-index: 9999;
 }
-.join-club{background: #DF3426; color: #fff; padding: 6px 18px 4px; border-radius: 6px;}
-.give-feedback{background: #989B42; color: #fff; padding: 6px 18px 4px; border-radius: 6px;}
+.join-club{background: #e64b21; color: #fff; padding: 6px 18px 4px; border-radius: 6px;}
+.give-feedback{background: #71803b; color: #fff; padding: 6px 18px 4px; border-radius: 6px;}
 
 .menu-section{/*background: url(images/menu-top-graphics.png) repeat-x top;*/}
 .menupage{ border-top: 12px solid #dd3227;}
@@ -393,9 +482,7 @@ width: 29px; height: 47px; background: url(images/arrow1.png) no-repeat;}
 .view-pizza-btn:hover{color: #fff; text-decoration: none;}
 .common-hide{padding: 43px 0 0;}
 
-.common-hide .item-segrication h3{color: #eebd42; font-size: 27px; padding-bottom: 12px;}
-
-
+.common-hide h3{color: #eebd42; font-size: 27px; padding-bottom: 12px;}
 .common-hide span{background: url(images/text-point-icon.png) no-repeat right;
 padding-right: 34px;}
 
@@ -418,7 +505,7 @@ font-size: 24px;
   background-size: 100%;
 
 }
-.carousel-inner img{max-height: 450px !important;}
+/*.carousel-inner img{max-height: 450px !important;}*/
 
 .feedback-page{padding: 55px 0 89px;}
 .feedback{
@@ -442,7 +529,7 @@ font-size: 24px;
   border-top: 12px solid #398e8b;
 }
 
-.partners h2 {
+.partners-page h2 {
   background: url(images/partner_bar.png) no-repeat;
   font-size: 24px;
   height: 63px;
@@ -500,13 +587,13 @@ font-size: 24px;
   width: 310px;
 }*/
 
-.banner{max-height: 578px; overflow: hidden;}
+.banner{/*max-height: 578px; overflow: hidden;*/}
 
 
 
 @media (max-width: 2500px) {
 
-  .banner{text-align: center;  max-height: 578px; overflow: hidden;}
+  .banner{text-align: center;  /*max-height: 578px;*/ overflow: hidden;}
 
 }
 
@@ -528,8 +615,8 @@ font-size: 24px;
 
 
 @media only screen and (max-width: 2500px) and (min-width: 1200px)  {
-  .banner-graphics{top: -84px}
-  .homepage .banner-graphics{top: -76px}
+ /* .banner-graphics{top: -84px}
+  .homepage .banner-graphics{top: -76px}*/
 }
 @media (max-width: 991px) {
     .banner-graphics{display: none;}
@@ -551,11 +638,73 @@ font-size: 24px;
     top: -75px;
   }
   .homepage .banner-graphics{top: -60px}
+  .menu-area ul li {
+    width: 22%;
+  }
+  .menu-area ul li:last-child img {
+    width: 58%;
+  }
+  .imp-date1 {
+    background-size: 72%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .left-logo {
-    width: 500px;
-    background-size: 90%;
+    width: 400px;
+    background-size: 100%;
+  }
+  .location-pop h2 {
+    font-size: 50px;
+  }
+  .grand-junction, .grand-frutia{
+    font-size: 30px;
+  }
+  .location-pop .modal-content {
+    background-size: 25% 60%;
+  }
+  .location-pop .modal-body {
+    padding: 50px 0;
+    margin-left: 60px;
+  }
+  .order-now {
+    width: 250px;
+    left: 15.8%;
+  }
+  .left-menu {
+    width: 15%;
+    left: 15px;
+    top: 130px;
+  }
+  .left-menu ul li {
+    padding: 10px 0;
+  }
+  .left-menu ul li img {
+    height: 50px;
+    width: 50px;
+  }
+  .left-menu ul li a {
+    font-size: 14px;
+  }
+  .first-step h2 {
+    font-size: 24px;
+  }
+  .bear-month h3{
+    font-size: 20px;
+  }
+  .first-left {
+    padding-top: 30px;
+  }
+  .menu-area ul li {
+    width: 22%;
+  }
+  .menu-area ul li:last-child img {
+    width: 46%;
+  }
+  .imp-date1 {
+    background-size: 72%;
+  }
+  .imp-date,.whats-new{
+    left: 0;
   }
 }
 
@@ -566,19 +715,33 @@ font-size: 24px;
   .order-now {
     width: 30%;
   }
+  .location-pop .modal-body {
+    padding: 20px 0;
+    margin-left: 70px;
+  }
+  .location-pop h2 {
+    font-size: 30px;
+  }
+  .grand-junction, .grand-frutia{
+    font-size: 20px;
+  }
+  .location-pop .modal-content {
+    background-size: 34% 100%;
+  }
+
+.left-menu{display: none; width: 25%;}
+.lft-menu-btn{display: block;}
+.whats-new{ position: relative; }
+.about-page {
+    padding: 50px 0;
+}
 }
 
-
 @media (max-width: 991px) {
-
-
 .heading-graphis{position: relative; width: 262px; height: auto; padding-top: 21px; font-size: 18px; top: -4px; left: 9px;}
-
-
 .first-step{padding-top: 0;}
 .menu-area h2{position: relative; left: 0;}
 .menu-area ul {padding:41px 0;}
-.menu-area ul li{margin-bottom: 20px;}
 .menu-area ul li:last-child::before{display: none;}
 .community-area-single{margin-bottom: 40px;}
 .about-graphics{padding-top: 35px;}
@@ -592,30 +755,20 @@ font-size: 24px;
 }
 
 
-
+/*
 @media (max-width: 768px) {
 .left-menu{width: 8%;}
 .menu-area ul li:last-child::before{display: none;}
-/*.left-logo{width: 54%;}*/
-
-
-}
-
-
-
-
-
+}*/
 @media (max-width: 600px) {
-
-
 .header-top{position: relative; left: 0; width: 100%; height: 6px;}
 .social-media{padding: 3px 0 0;}
 .social-media ul li{width: 38px;}
 .order-now{top: -3px; width: 123px; left: 20%;}
 .first-left{padding-top: 0;}
-.left-menu{width: 19%; position: fixed; top: 20%; z-index: 8889;}
-.grand-junction{width: 56%;/* padding: 9px 0;*/ font-size: 18px;}
-.grand-frutia{width: 52%; /*padding: 9px 0;*/ font-size: 18px;}
+/*.left-menu{width: 19%; position: fixed; top: 20%; z-index: 8889;}*/
+/*.grand-junction{width: 56%;font-size: 18px;}
+.grand-frutia{width: 52%; font-size: 18px;}*/
 .location-pop .close{top: -6px; right: -6px; width: 32px; height: 32px; z-index: 9999;}
 .banner-graphics{display: none;}
 .left-logo:after{background: none;}
@@ -645,8 +798,6 @@ font-size: 24px;
 }
 .menu-area ul{margin-bottom: 0;}
 
-.left-menu{display: none;}
-.lft-menu-btn{display: block;}
 
 .menu-area ul li:last-child img {
     width: auto;
@@ -667,24 +818,30 @@ font-size: 24px;
 
 @media (max-width: 480px) {
 
-.grand-frutia{padding: 30px 0;}
-.grand-junction{padding: 28px 0;}
-.location-pop .modal-content{height: auto;}
+.grand-frutia, .grand-junction{padding: 15px;}
+.location-pop .modal-content{height: auto; background-size: 30%;}
 .location-pop .modal-body{padding: 15px;}
-.location-pop .modal-content{background: #262626 url("images/location-horse.jpg") no-repeat scroll left bottom / 85px 126px}
-
 .location-pop h2 {
   font-size: 37px;
   margin-bottom: 31px;
   margin-top: 14px;
 }
 .logo{width: 29%;}
+.location-pop .modal-body {
+    margin-left: 0;
+}
+.left-menu {
+    display: none;
+    width: 35%;
+}
 
 }
-div.item-segrication h3 a {
-color: #eebd42;  
-text-decoration: none;
-}
+
+
+
+
+
+
 /*.sbi_photo_wrap {
     height: 212px !important;
     padding-left: 15px;
