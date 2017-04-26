@@ -6,7 +6,7 @@ get_header(); ?>
  <div class="bodypart homepage">
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                <div class="col-md-10 col-sm-10 col-sm-offset-2">
                     <div class="banner-graphics">
                         <img src="<?php echo get_template_directory_uri();?>/images/header-graphics.png" alt="img">
                     </div>
@@ -14,7 +14,7 @@ get_header(); ?>
                         PiZZA OF THE WEEK
                     </div>
                     <div class="row first-step">
-                        <div class="col-md-5 col-sm-7 col-md-offset-1">
+                        <div class="col-md-6 col-sm-7">
                             <div class="first-left">
                                 
                                 <?php if( get_field('curry_on_my_wayward_son_title') ): ?>
@@ -30,17 +30,20 @@ get_header(); ?>
 
                                 <div class="bear-month">
                                     <div class="row">
-                                        <div class="col-md-2 col-sm-2">
-                                            <img src="<?php echo get_template_directory_uri();?>/images/can.png" alt="img">
+                                        <div class="col-md-3 col-sm-3">
+                                            <div class="row">
+                                                <img src="<?php echo get_template_directory_uri();?>/images/can.png" alt="img" class="img-responsive">
+                                            </div>                                            
                                         </div>
-                                        <div class="col-md-10 col-sm-10">
-                                             
+                                        <div class="col-md-9 col-sm-9">
+                                            <div class="row">
                                             <?php if( get_field('beer_of_the_month') ): ?>
                                                 <h3><?php the_field('beer_of_the_month'); ?></h3>
                                             <?php endif; ?>
                                                         <?php if( get_field('3rd_eye_pale!____$3') ): ?>
                                                 <h4><?php the_field('3rd_eye_pale!____$3'); ?></h4>
                                             <?php endif; ?>
+                                            </div>
                                         </div>
 
                                     </div>
@@ -48,7 +51,7 @@ get_header(); ?>
                             </div>
 
                         </div>
-                        <div class="col-md-6 col-sm-4 pizza-holder">
+                        <div class="col-md-6 col-sm-5 pizza-holder">
                         <?php
                             $image = get_field('curry_on_my_wayward_son_image');
                         ?>
@@ -62,7 +65,7 @@ get_header(); ?>
         <div class="menu-area">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                    <div class="col-md-10 col-sm-10 col-sm-offset-2">
                         <h2>THE MENU</h2>
                        
                         <?php if( have_rows('the_menu') ): ?>
@@ -91,129 +94,12 @@ get_header(); ?>
             </div>
         </div>
         <div class="community-news">
-            <div class="container">
-                <div class="imp-date1">
-                    <div class="row relative">
-                        <div class="col-md-10 col-sm-10 col-sm-offset-1">
-                            <h2>COMMUNiTY NEWS</h2>
-                            <div class="community-area">
-                                <div class="row">
-                                    <div class="col-md-3 col-sm-6 community-area-single">
-                                        <div class="com-pic">
-                                            4.10
-                                        </div>
-                                        <div class="com-days">
-                                            Monday
-                                        </div>
-                                        <div class="com-info">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 community-area-single">
-                                        <div class="com-pic">
-                                            4.11
-                                        </div>
-                                        <div class="com-days">
-                                            Tuesday
-                                        </div>
-                                        <div class="com-info">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 community-area-single">
-                                        <div class="com-pic">
-                                            4.12
-                                        </div>
-                                        <div class="com-days">
-                                            Wednesday
-                                        </div>
-                                        <div class="com-info">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 col-sm-6 community-area-single">
-                                        <div class="com-pic">
-                                            4.13
-                                        </div>
-                                        <div class="com-days">
-                                            Thrusday
-                                        </div>
-                                        <div class="com-info">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="imp-date"><img src="<?php echo get_template_directory_uri();?>/images/imp-dates.png" alt="img"></div>
-                    </div>
-                </div>
-                <div class="whats-new-row">
-                    <div class="row relative">
-                        <div class="col-md-10 col-sm-10 col-sm-offset-1">
-                            <div class="row ">
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="free-dough">
-                                        <h3>GLUTEN FREE DOUGH!</h3>
-                                        <p>
-                                            N have gluten free dough! We love to feature locally grown
-                                            <br> produce (when available) on our pizza of the week!commodo,
-                                            <br> laoreet leo non, egestas tellus.
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <div class="support">
-                                        <h3>SUPPORT OUR RiVERS!</h3>
-                                        <p>
-                                            Drink Many Rivers Brewing Amber Ale for a good cause. It’s a new
-                                            <br>local beer in GJ where 100% of profits goes to river restoration! From the Many Rivers brewery.
-                                        </p>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="whats-new"><img src="<?php echo get_template_directory_uri();?>/images/whats-new.png" alt="img"></div>
-                    </div>
-                </div>
-                <div class="spec-post">
-                    <div class="row relative">
-                        <div class="col-md-10 col-sm-10 col-sm-offset-1">
-                            <div class="row">
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="post-demo">
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="post-demo">
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="post-demo">
-
-                                    </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="post-demo">
-
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="whats-new"><img src="<?php echo get_template_directory_uri();?>/images/social-post.png" alt="img"></div>
-                    </div>
-
-                </div>
-            </div>
+            <?php include('parts/comunity.php') ?>
         </div>
         <div class="about-pablos">
             <div class="container">
                 <div class="row relative">
-                    <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                    <div class="col-md-10 col-sm-10 col-sm-offset-2">
                         <h2>ABOUT PABLOS</h2>
                         <div class="row about-sec">
                             <div class="col-md-8 col-sm-12">
@@ -266,7 +152,7 @@ get_header(); ?>
             <div class="map-area">
                 <div class="container">
                     <div class="row relative">
-                        <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                        <div class="col-md-10 col-sm-10 col-sm-offset-2">
                             <h2>LOCATiON</h2>
                             <div class="location-main">
                                 <div class="col-md-6 col-sm-12">

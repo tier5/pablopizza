@@ -7,7 +7,7 @@
  <div class="bodypart feedback">        
         <div class="container">
             <div class="row">
-                <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                <div class="col-md-10 col-sm-10 col-sm-offset-2">
                     <div class="banner-graphics">
                         <img src="<?php echo get_template_directory_uri();?>/images/header-graphics.png" alt="img">
                     </div>
@@ -46,7 +46,7 @@
                 <div class="menu-area">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-10 col-sm-10 col-sm-offset-1">
+                            <div class="col-md-10 col-sm-10 col-sm-offset-2">
                                 <h2>THE MENU</h2>
                                <!--  <ul>
                                     <li>
@@ -91,4 +91,7 @@
                     </div>
                 </div>
             </div>
+             <div class="community-news">
+                    <?php include('parts/comunity.php') ?>
+                </div>
         <?php include 'about_footer.php'; ?>

@@ -65,14 +65,11 @@
 .feedback form label{
     vertical-align: top;
 	font-weight: normal;
-	    font-size: 18px;
 } 
 
 .feedback form input{
 	background: none;
-    height: 40px;
-    font-size: 20px;
-    font-family: 'Fjalla One', sans-serif;
+	height: 35px;
 }
 
 .feedback form textarea{
