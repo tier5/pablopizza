@@ -137,10 +137,17 @@ get_header(); ?>
                             </div>
                             <div class="col-md-4 col-sm-12">
                                 <div class="about-graphics">
-                                <?php
-                                   $image1 = get_field('about_pablos');
-                                ?>
-                                    <img src="<?php echo $image1['url']?>" alt="img">
+                                
+                                <?php 
+
+                                $about_pablos = get_field('about_pablos');
+
+                                if( !empty($about_pablos) ): ?>
+
+                                    <img src="<?php echo $about_pablos['url']; ?>" alt="<?php echo $about_pablos['alt']; ?>" />
+
+                                <?php endif; ?>
+                                    
                                 </div>
                             </div>
                         </div>

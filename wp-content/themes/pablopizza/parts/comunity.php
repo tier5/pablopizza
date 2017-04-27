@@ -53,7 +53,7 @@
                             <?php while (have_posts()) : the_post();$i++;?> 
                              
                                <div class="col-md-6 col-sm-6">
-                                    <div <?php if($i == 1){?>class="free-dough"<?php }elseif ($i==2){?>class="support"<?php } ?>>
+                                    <div class="<?php echo ($i % 2 == 0) ? 'support' : 'free-dough';  ?>">
                                         <h3><?php the_title(); ?></h3>
                                         <?php the_content(); ?>
                                     </div>
@@ -75,8 +75,52 @@
                         
                         
                             <div class="row">
+                                <?php
+                                    $appID = '352996131769901';
+                                    $appSecret = 'f26707f3eb9a9b6f7f0c30b719839f3c';
+
+                                    $accessToken = $appID . '|' . $appSecret;
+
+                                    $id = '186581841860206';
+                                    $fbLimit = 4;
+                                    $fbCount = 0;
+
+
+                                    $url = "https://graph.facebook.com/$id/posts?fields=id,full_picture,type,from,message,status_type,object_id,name,caption,description,link,created_time&access_token=$accessToken";
+
+                                    $result = file_get_contents($url);
+
+                                    $fbdata = json_decode($result, true);
+                                    foreach ($fbdata['data'] as $post )
+                                    {
+
+                                     $post_created = date('j M - Y', strtotime($post['created_time']));
+                                            $post_text = $post['message'];
+                                            $post_url = $post['link'];
+                                            //$post_picture = $post['picture'];
+                                             $post_picture = $post['full_picture'];    
+                                            //echo '<a href="'.$post_url.'"><img src="'.$post_picture.'"></a><br/>';
+
+                                ?>
                             
                                 <div class="col-md-3 col-sm-3">
+                                    <!-- <div class="post-demo">
+
+                                    </div> -->
+                                    <div class="post-demo">
+                                    <a href="<?= $post_url ?>" target="_blank">
+                                    <img src="<?= $post_picture ?>" alt="Lights">
+
+                                    </a>
+                                    </div>
+                                </div>
+                                <?php 
+                                    $fbCount++;
+                                     if($fbCount >= $fbLimit) break;
+                                    } 
+                                ?>
+
+                               <!--  <div class="col-md-3 col-sm-3">
                                     <div class="post-demo">
 
                                     </div>
@@ -90,12 +134,7 @@
                                     <div class="post-demo">
 
                                     </div>
-                                </div>
-                                <div class="col-md-3 col-sm-3">
-                                    <div class="post-demo">
-
-                                    </div>
-                                </div>
+                                </div> -->
 
                             </div>
                         </div>

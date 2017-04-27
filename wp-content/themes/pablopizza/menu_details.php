@@ -72,7 +72,7 @@
                                             //print_r( $posts_array ); 
                                             foreach ( $posts_array as $newpost ) {?>
                                         <div class="item-segrication">
-                                            <h3><span><a href="<?php //echo get_permalink( $newpost->ID )?>"><?php echo $newpost->post_title;?></a></span></h3> <?php echo $newpost->post_content;?>
+                                            <h3><span><a><?php echo $newpost->post_title;?></a></span></h3> <?php echo $newpost->post_content;?>
                                         </div>
                                         <?php } ?>
                                         
@@ -87,99 +87,19 @@
                                     }
                                 ?>
                             
-                            <!--<div class="accordian-block">
-                                <h4>SALADS</h4>
-                                <p>
-                                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.
-                                </p>
-                                <div class="dish-type">VEGETARiAN</div>
-
-                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo1">VIEW THE SALADS</span>
-
-                                <div id="demo1" class="collapse">
-                                    <div class="common-hide">
-                                        <div class="item-segrication">
-                                            <h3><span>SiDE SALAD</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>CREATE YOUR OWN</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>ANTiPASTO</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>GREEK SALAD</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>UNICORNICOPIA</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordian-block">
-                                <h4>APPETIZERS</h4>
-                                <p>
-                                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.leap into electronic typesetting.
-                                </p>
-                                <br>
-
-                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo2">VIEW THE APPETIZERS</span>
-
-                                <div id="demo2" class="collapse">
-                                    <div class="common-hide">
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordian-block">
-                                <h4>FOR THE KiDS</h4>
-                                <p>
-                                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release.leap into electronic typesetting.
-                                </p>
-                                <br>
-
-                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo3">VIEW THE PIZZAS</span>
-
-                                <div id="demo3" class="collapse">
-                                    <div class="common-hide">
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                        <div class="item-segrication">
-                                            <h3><span>LOREMiPSUM</span></h3> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>-->
+                           
                         </div>
                     </div>
                 </div>
-                 <div class="community-news">
-                    <?php include('parts/comunity.php') ?>
-                </div>
+                <!--  <div class="community-news">
+                    <?php //include('parts/comunity.php') ?>
+                </div> -->
+               
+              
+          
             </div>
         </div>
+        <div class="community-news">
+                    <?php include('parts/comunity.php') ?>
+                </div>
         <?php include 'menu_footer.php';?>

@@ -57,7 +57,9 @@
                     </div>
                 </div>
             </div>
-            <div class="community-news">
+           <div class="row">
+              <div class="community-news">
                     <?php include('parts/comunity.php') ?>
                 </div>
+            </div>   
         <?php include 'about_footer.php'; ?>

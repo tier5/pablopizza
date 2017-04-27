@@ -241,7 +241,7 @@ right: -13px;}
     display: block;
     padding: 20px;
   }
-.menu-area ul li:last-child{width: 50px; position: relative; background: none;}
+.menu-area ul li:last-child{width: 50px; position: relative; background: none; text-align: left;}
 .menu-area ul li:last-child a{ padding: 0;}
 .menu-area ul li:last-child img{width: 70%;}
 .menu-area h2{background: url(images/heading-bg.png) no-repeat; position: absolute; top: 0; left: 0; width: 310px;
@@ -274,7 +274,7 @@ margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63p
 
 .partners .whats-new {
     width: 57px;
-    left: 0;
+    left: 85px;
 }
 
 .free-dough{border-top: 7px solid #38908e; padding-top: 9px; min-height: 200px;}
@@ -437,8 +437,9 @@ color: #fff; opacity: 1; background: url(images/cross.png) no-repeat center #363
 z-index: 9999;
 }
 .join-club{background: #e64b21; color: #fff; padding: 6px 18px 4px; border-radius: 6px;}
+a.join-club:hover{color: #fff; text-decoration: none; cursor: pointer;}
 .give-feedback{background: #71803b; color: #fff; padding: 6px 18px 4px; border-radius: 6px;}
-
+a.give-feedback:hover{color: #fff; text-decoration: none; cursor: pointer;}
 .menu-section{/*background: url(images/menu-top-graphics.png) repeat-x top;*/}
 .menupage{ border-top: 12px solid #dd3227;}
 .menu-section-main{padding: 55px 0 89px;}
@@ -553,10 +554,12 @@ font-size: 24px;
   padding: 100px 0;
 }
 
-.partners h3{
+/*.partners h3{
   border-top: 7px solid #398e8b;
   padding-top: 15px;
-}
+}*/
+
+.part-heading{border-top: 7px solid #398e8b; padding-top: 15px;}
 
 .partners h4{
     margin: 20px 0;
@@ -588,6 +591,9 @@ font-size: 24px;
 }*/
 
 .banner{/*max-height: 578px; overflow: hidden;*/}
+
+
+
 
 
 
@@ -872,15 +878,20 @@ font-size: 24px;
     padding: 0px;
     margin-top: 0px;
 }
+.post-demo a img {
+    height: 200px !important;
+    width: 213px !important;
+}
 
+.join-club-pop{background: #5b5b54 !important;}
+.join-club-pop button[type="submit"]{background: #e64b21; color: #fff; border: none;}
+.join-club-pop button[type="button"]{color: #fff; text-shadow: none; opacity: 1;}
 
+/*.partners .free-dough{border-top: none !important;}
+.partners .support{border-top: none !important;}*/
 
-
-
-
-
-
-
+.item-segrication a{color: #eebd42;}
+.item-segrication a:hover{text-decoration: none;}
 
 
 
