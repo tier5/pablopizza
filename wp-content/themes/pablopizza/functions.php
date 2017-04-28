@@ -792,7 +792,7 @@ add_filter('wpcf7_form_elements', function($content) {
 
 function custom_loginlogo() {
 echo '<style type="text/css">
-h1 a {background-image: url('.get_bloginfo('template_directory').'/images/pabalo.png) !important; }
+h1 a {background-image: url('.get_bloginfo('template_directory').'/images/logo-new.png) !important; }
 </style>';
 }
 add_action('login_head', 'custom_loginlogo');
@@ -924,6 +924,10 @@ register_post_type('Whats new', $args);
 
 }
 add_action('init', 'whats_news_register_post_type');
+
+
+include 'functions/theme-function.php';
+
 
 
 add_action('init', 'start_session', 1);

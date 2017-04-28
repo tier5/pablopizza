@@ -277,6 +277,7 @@ margin: 0; padding: 10px; background-size: 100%; text-align: center; height: 63p
     left: 85px;
 }
 
+
 .free-dough{border-top: 7px solid #38908e; padding-top: 9px; min-height: 200px;}
 .free-dough h3{
     color: #fff;
@@ -877,6 +878,13 @@ font-size: 24px;
     margin-bottom: 0px;
     padding: 0px;
     margin-top: 0px;
+}
+.single-pic a img{
+    height: 211px !important;
+    margin-bottom: 20px !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    width: 243px !important;
 }
 .post-demo a img {
     height: 200px !important;

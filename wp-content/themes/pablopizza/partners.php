@@ -55,7 +55,8 @@
 
                             </div>
                         </div>
-                        <div class="whats-new"><img src="<?php echo get_template_directory_uri();?>/images/our_partner.png" alt="img"></div>
+                        <div class="whats-new" style="width: 57px !important;
+    left: 0px !important;"><img src="<?php echo get_template_directory_uri();?>/images/our_partner.png" alt="img"></div>
                     </div>
                 </div>
             </div>
@@ -162,14 +163,16 @@
                                 <div class="col-md-10 col-sm-10 col-sm-offset-2">                              
                                     <div class="row">
                                         <?php
-                                            $appID = '352996131769901';
-                                            $appSecret = 'f26707f3eb9a9b6f7f0c30b719839f3c';
+                                            $appID = get_option('of_lyhfbaid');
+                                    
+                                            $appSecret = get_option('of_lyhfbasid');
 
                                             $accessToken = $appID . '|' . $appSecret;
 
-                                            $id = '186581841860206';
+                                            $id = get_option('of_lyhfbpid');
                                             $fbLimit = 4;
                                             $fbCount = 0;
+                                            
 
 
                                             $url = "https://graph.facebook.com/$id/posts?fields=id,full_picture,type,from,message,status_type,object_id,name,caption,description,link,created_time&access_token=$accessToken";
