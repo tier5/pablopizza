@@ -52,13 +52,19 @@
     });
     </script>
     <script type="text/javascript">
-      $(document).ready(function(){
+      /*$(document).ready(function(){
         $(".joinclub-list").click(function() {
     $('html,body').animate({
         scrollTop: $(".stay-connected-red").offset().top},
         'slow');
 });
-      });
+      });*/
+       $(document).ready(function() {
+       	$(".joinclub-list").click(function() {
+            $("#myModal1").modal('show');
+         });
+        });
+
     </script>
 
 
