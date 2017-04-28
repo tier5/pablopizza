@@ -141,8 +141,7 @@ get_header(); ?>
                                 
                                 <?php 
 
-                                $about_pablo = get_field('about_pablos',4);
-                                
+                                $about_pablo = get_field('about_pablos',4);                             
 
                                 if( !empty($about_pablo) ): ?>
 
