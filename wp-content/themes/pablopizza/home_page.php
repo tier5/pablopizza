@@ -54,6 +54,7 @@ get_header(); ?>
                         <div class="col-md-6 col-sm-5 pizza-holder">
                         <?php
                             $image = get_field('curry_on_my_wayward_son_image');
+
                         ?>
                             <img src="<?php echo $image['url']; ?>" alt="img">
                         </div>
@@ -140,11 +141,12 @@ get_header(); ?>
                                 
                                 <?php 
 
-                                $about_pablos = get_field('about_pablos');
+                                $about_pablo = get_field('about_pablos',4);
+                                
 
-                                if( !empty($about_pablos) ): ?>
+                                if( !empty($about_pablo) ): ?>
 
-                                    <img src="<?php echo $about_pablos['url']; ?>" alt="<?php echo $about_pablos['alt']; ?>" />
+                                    <img src="<?php echo $about_pablo['url']; ?>" alt="<?php echo $about_pablo['alt']; ?>" />
 
                                 <?php endif; ?>
                                     
