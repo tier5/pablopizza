@@ -14,14 +14,45 @@
     <script type="text/javascript">
         $(document).ready(function(){
             $(".grand-junction").click(function(){
+                $(".bimggrandjunction").hide();
+                 $(".bimgfrutia").hide();
+
                  $(".imggrandjunction").show();
                  $(".imgfrutia").hide();
                  $("#myModal").modal('hide');
+                 var data = {
+                  'action': 'image_action1',
+                  'imgval': 'grand-junction'
+                };
+              
+                var ajaxurl = '<?php echo admin_url( 'admin-ajax.php' );?>';
+
+                // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+                
+                jQuery.post(ajaxurl, data, function(response) {
+                  
+                });
+                 
             });
             $(".grand-frutia").click(function(){
+
+                $(".bimggrandjunction").hide();
+                 $(".bimgfrutia").hide();
                 $(".imgfrutia").show();
                 $(".imggrandjunction").hide();
                 $("#myModal").modal('hide');
+                var data = {
+                  'action': 'image_action2',
+                  'imgval': 'grand-frutia'
+                };
+                
+                var ajaxurl = '<?php echo admin_url( 'admin-ajax.php' );?>';
+                // since 2.8 ajaxurl is always defined in the admin header and points to admin-ajax.php
+                
+                jQuery.post(ajaxurl, data, function(response) {
+                  
+                });
+                
             });
         });
     </script>

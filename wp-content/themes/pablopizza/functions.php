@@ -936,3 +936,26 @@ if(!session_id()) {
 session_start();
 }
 }
+
+
+
+add_action( 'wp_ajax_image_action1', 'image_action1' );
+add_action( 'wp_ajax_nopriv_image_action1', 'image_action1' );
+function image_action1() {
+	global $wpdb;
+
+	$imgval = $_POST['imgval'];
+	//$imgval2 = $_POST['imgval2'];
+	update_option('show-popup-image',$imgval);
+	exit;
+}
+add_action( 'wp_ajax_image_action2', 'image_action2' );
+add_action( 'wp_ajax_nopriv_image_action2', 'image_action2' );
+function image_action2() {
+	global $wpdb;
+
+	$imgval = $_POST['imgval'];
+	//$imgval2 = $_POST['imgval2'];
+	update_option('show-popup-image',$imgval);
+	exit;
+}

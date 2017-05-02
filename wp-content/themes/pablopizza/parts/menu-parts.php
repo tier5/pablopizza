@@ -5,14 +5,22 @@ $_SESSION['foo'] = $foo;
 
 ?>
 
+
         <div class="left-menu">
             <ul>
-                <li>
-                   
-                        <img class="imgfrutia" src="<?php echo get_template_directory_uri();?>/images/fruita-button.png" alt="img">
-                   
-                   
+                <li>   
+                        <?php if(get_option('show-popup-image') == 'grand-junction'){?>
+                        <img class="bimggrandjunction" src="<?php echo get_template_directory_uri();?>/images/grand_junction.png" alt="img">
+                        <?php }else{?>
                         <img class="imggrandjunction" src="<?php echo get_template_directory_uri();?>/images/grand_junction.png" alt="img">
+                        <?php }?>
+                        
+                        
+                         <?php if(get_option('show-popup-image') == 'grand-frutia'){?>
+                        <img class="bimgfrutia" src="<?php echo get_template_directory_uri();?>/images/fruita-button.png" alt="img">
+                        <?php }else{?>
+                        <img class="imgfrutia" src="<?php echo get_template_directory_uri();?>/images/fruita-button.png" alt="img">
+                        <?php }?>
                     
 
                     
