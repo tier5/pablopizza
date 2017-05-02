@@ -17,7 +17,7 @@
                         <div class="menu-section-main">
                             <h2>MENU</h2>
                             <div class="download-menu">
-                                <a href="#">
+                                <a href="<?php echo get_option('of_lylmenu'); ?>">
                                     <img src="<?php echo get_template_directory_uri();?>/images/download-menu.png" alt="img">
                                 </a>
                             </div>
@@ -49,7 +49,7 @@
                                 </p>
                                 <div class="dish-type">VEGETARiAN</div>
 
-                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo<?php  if($count=='0'){echo '';}else{echo $count;}?>">VIEW THE PiZZAS</span>
+                                <span class="view-pizza-btn" data-toggle="collapse" data-target="#demo<?php  if($count=='0'){echo '';}else{echo $count;}?>">VIEW THE <?php echo $term->name; ?></span>
 
                                 <div id="demo<?php  if($count=='0'){echo '';}else{echo $count;}?>" class="collapse">
                                     <div class="common-hide">

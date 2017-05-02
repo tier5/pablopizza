@@ -928,6 +928,7 @@ add_action('init', 'whats_news_register_post_type');
 
 include 'functions/theme-function.php';
 
+remove_filter('the_content', 'wpautop');
 
 
 add_action('init', 'start_session', 1);

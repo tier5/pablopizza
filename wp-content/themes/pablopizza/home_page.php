@@ -94,7 +94,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="community-news">
+        <div class="community-news" id="community-news">
             <?php include('parts/comunity.php') ?>
         </div>
         <div class="about-pablos">
@@ -156,7 +156,7 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        <div class="location">
+        <div class="location" id="location">
             <div class="map-area">
                 <div class="container">
                     <div class="row relative">

@@ -1,9 +1,4 @@
-<?php
 
-$foo = 'Foo Data';
-$_SESSION['foo'] = $foo;
-
-?>
 
 
         <div class="left-menu">
@@ -33,10 +28,19 @@ $_SESSION['foo'] = $foo;
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-list">
+                <?php if ( is_home() || is_front_page() ){?>
+
+                    <a href="#community-news" class="menu-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/news-ico.png" alt="img" class="img-responsive">
                         <span>news</span>
                     </a>
+                 <?php }else{ ?>
+                    <a href="/#community-news" class="menu-list">
+                        <img src="<?php echo get_template_directory_uri();?>/images/news-ico.png" alt="img" class="img-responsive">
+                        <span>news</span>
+                    </a>
+
+                 <?php } ?>   
                 </li>
                 <li>
                     <a href="<?php echo site_url();?>/about-us" class="menu-list">
@@ -45,10 +49,18 @@ $_SESSION['foo'] = $foo;
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0);" class="menu-list">
+                 <?php if ( is_home() || is_front_page() ){?>
+                    <a href="#location" class="menu-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/location-ico.png" alt="img" class="img-responsive">
                         <span>locations</span>
                     </a>
+                  <?php }else{ ?>   
+                     <a href="<?php echo site_url();?>/#location" class="menu-list">
+                        <img src="<?php echo get_template_directory_uri();?>/images/location-ico.png" alt="img" class="img-responsive">
+                        <span>locations</span>
+                    </a>
+
+                   <?php } ?>   
                 </li>
                 <li>
                     <a href="<?php echo site_url();?>/partners" class="menu-list">

@@ -65,9 +65,8 @@ $body_pos = array("top left","top center","top right","center left","center cent
 // Set the Options Array
 $options = array();
 /*--------------------------Facebook Section---------------------------*/
-$options[] = array( "name" => "Facebook feed setting Settings",
-                    "type" => "heading");
-					
+$options[] = array( "name" => "Facebook feed Settings",
+                    "type" => "heading");				
 
 
 $options[] = array( "name" => "Facebook App ID/API Key",
@@ -90,9 +89,8 @@ $options[] = array( "name" => "Facebook Page ID",
 
 
 /*--------------------------Flickr Section---------------------------*/
-$options[] = array( "name" => "Flickr feed setting Settings",
-                    "type" => "heading");
-					
+$options[] = array( "name" => "Flickr feed Settings",
+                    "type" => "heading");					
 
 
 $options[] = array( "name" => "Flickr App ID/API Key",
@@ -112,6 +110,39 @@ $options[] = array( "name" => "Flickr Tag Name",
 					"id" => $shortname."_lyhfltg",
 					"std" => "",
 					"type" => "text");
+
+/*--------------------------Social Connect Section---------------------------*/
+$options[] = array( "name" => "Social Connect Settings",
+                    "type" => "heading");				
+
+
+$options[] = array( "name" => "Facebook Url",
+					"desc" => "Enter Your Facebook Url.",
+					"id" => $shortname."_lyhfbsurl",
+					"std" => "",
+					"type" => "text");
+
+$options[] = array( "name" => "Instagram Url",
+					"desc" => "Enter Your Instagram Url.",
+					"id" => $shortname."_lyhinsurl",
+					"std" => "",
+					"type" => "text");
+
+$options[] = array( "name" => "Email Id",
+					"desc" => "Enter Your Email Id.",
+					"id" => $shortname."_lyhemailid",
+					"std" => "",
+					"type" => "text");
+/*-----------------------------Uploaded Menu In Menu Page----------------*/
+$options[] = array( "name" => "Uploaded Menu In Menu Page Settings",
+                    "type" => "heading");
+
+$options[] = array( "name" => "Upload Menu",
+					"desc" => "Upload a menu",
+					"id" => $shortname."_lylmenu",
+					"std" => "",
+					"type" => "upload");     
+
 
 
 update_option('of_template',$options); 					  
