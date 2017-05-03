@@ -485,7 +485,8 @@ width: 29px; height: 47px; background: url(images/arrow1.png) no-repeat;}
 .common-hide{padding: 43px 0 0;}
 
 .common-hide h3{color: #eebd42; font-size: 27px; padding-bottom: 12px;}
-.common-hide span{background: url(images/text-point-icon.png) no-repeat right;
+.common-hide span{
+  background: url(images/text-point-icon.png) no-repeat right;
 padding-right: 34px;}
 
 .item-segrication{ border-bottom: 1px solid #464743; padding-bottom: 23px; }

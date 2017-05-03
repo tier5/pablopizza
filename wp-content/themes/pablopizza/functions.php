@@ -960,3 +960,6 @@ function image_action2() {
 	update_option('show-popup-image',$imgval);
 	exit;
 }
+
+
+

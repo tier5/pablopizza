@@ -12,7 +12,7 @@
 
                               
                                 <?php
-                                query_posts(array('posts_per_page' =>4,'post_type'=>'importantdate'));                              
+                                query_posts(array('posts_per_page' =>4,'post_type'=>'importantdate','order' => 'ASC' ));                              
                                 ?>
                                 <?php if (have_posts()) : ?>
                                 <?php while (have_posts()) : the_post();?>
@@ -46,7 +46,7 @@
                             <div class="row ">
                                
                             <?php
-                            query_posts(array('posts_per_page' =>2,'post_type'=>'whatsnew'));     
+                            query_posts(array('posts_per_page' =>2,'post_type'=>'whatsnew', 'order' => 'ASC'));     
                             $i=0;                         
                             ?>
                             <?php if (have_posts()) : ?>

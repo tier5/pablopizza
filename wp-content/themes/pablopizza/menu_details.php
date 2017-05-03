@@ -29,7 +29,7 @@
                                 wp_reset_query(); //resetting the page query
                                 ?>
                             </div>
-                            <?php 
+                            <?php $i=1;
 
                             $args = array(
                                            'posts_per_page' => -1,
@@ -41,7 +41,7 @@
                                     if ( ! empty( $terms ) && ! is_wp_error( $terms ) ){
                                        $count='0';
                                         foreach ( $terms as $term ) {?>
-                                            <div class="accordian-block">
+                                            <div class="accordian-block" id="the-menu-<?php echo $i;?>">
 
                                 <h4><?php echo $term->name; ?></h4>
                                 <p>
@@ -72,7 +72,16 @@
                                             //print_r( $posts_array ); 
                                             foreach ( $posts_array as $newpost ) {?>
                                         <div class="item-segrication">
-                                            <h3><span><a><?php echo $newpost->post_title;?></a></span></h3> <?php echo $newpost->post_content;?>
+                                        <?php 
+                                       $dash_icon = get_field('dash_icon_2',$newpost->ID);   
+                                      // $value = $dash_icon['value'];
+/*
+echo '<pre>';
+var_dump($value);
+echo '</pre>';        */                                                             ?>
+                <h3><?php if ($dash_icon) 
+{?><span><a><?php echo $newpost->post_title;?></a></span><?php }else{ ?><a><?php echo $newpost->post_title;?></a><?php } ?></h3> 
+                                            <?php echo $newpost->post_content;?>
                                         </div>
                                         <?php } ?>
                                         
@@ -80,7 +89,7 @@
                                 </div>
                             </div>
 
-                                       <?php  $count++;}
+                                       <?php  $i++;$count++;}
 
                                        
                                         

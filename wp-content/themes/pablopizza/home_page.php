@@ -69,17 +69,17 @@ get_header(); ?>
                     <div class="col-md-10 col-sm-10 col-sm-offset-2">
                         <h2>THE MENU</h2>
                        
-                        <?php if( have_rows('the_menu') ): ?>
+                        <?php $i=0; if( have_rows('the_menu') ): ?>
                              <ul>
-                            <?php while( have_rows('the_menu') ): the_row(); 
+                            <?php while( have_rows('the_menu') ): the_row();$i++; 
 
                             $image = get_sub_field('image');
                             
-                            $link = get_sub_field('link');
+                            //$link = get_sub_field('link');
 
                             ?>
                             <li>
-                                <a href="<?php echo $link; ?>"><img src="<?php echo $image['url']; ?>" alt="img"></a>
+                                <a href="<?php echo site_url()?>/menu-details/#the-menu-<?php echo $i;?>"><img src="<?php echo $image['url']; ?>" alt="img"></a>
                             </li>
                             <?php endwhile; ?>
                             <li>
