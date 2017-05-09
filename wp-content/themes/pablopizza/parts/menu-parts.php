@@ -34,8 +34,8 @@
                         <img src="<?php echo get_template_directory_uri();?>/images/news-ico.png" alt="img" class="img-responsive">
                         <span>news</span>
                     </a>
-                 <?php }else{ ?>
-                    <a href="/#community-news" class="menu-list">
+                 <?php }else{ $url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];?>
+                    <a href="<?php echo $url; ?>/#community-news" class="menu-list">
                         <img src="<?php echo get_template_directory_uri();?>/images/news-ico.png" alt="img" class="img-responsive">
                         <span>news</span>
                     </a>

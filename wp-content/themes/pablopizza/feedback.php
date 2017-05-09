@@ -92,7 +92,7 @@
                 </div>
             </div>
              <div class="row">
-              <div class="community-news">
+              <div class="community-news" id="community-news">
                     <?php include('parts/comunity.php') ?>
                 </div>
             </div>   

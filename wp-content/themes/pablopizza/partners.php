@@ -93,7 +93,7 @@
 		        </div>               
         	</div>
             <div class="row">
-            <div class="community-news">                   
+            <div class="community-news" id="community-news">                   
             
                     <div class="container">
                         <div class="imp-date1">

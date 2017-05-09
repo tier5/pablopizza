@@ -108,7 +108,7 @@ echo '</pre>';        */                                                        
           
             </div>
         </div>
-        <div class="community-news">
+        <div class="community-news" id="community-news">
                     <?php include('parts/comunity.php') ?>
                 </div>
         <?php include 'menu_footer.php';?>
