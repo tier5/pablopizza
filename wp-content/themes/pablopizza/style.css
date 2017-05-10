@@ -98,6 +98,8 @@ z-index: 1; background-size: covered; background-size: 80%}
 }
 
 .logo{width: 33%;padding: 20px 0;}
+
+.carousel-inner{text-align: center;}
 .banner img{width: 100%;}
 
 .item{position: relative;}
@@ -374,8 +376,8 @@ footer{background: url(images/footer.jpg) repeat-x; height: 62px;}
   margin-bottom: 30px;
 }
 
-.location-pop .modal-content{background: url(images/unicorn.jpg) no-repeat left bottom #4E4E4E; background-size: 27% 80%; /* background-size: 177px 276px;*/
- position: relative;
+.location-pop .modal-content{background: url(images/unicorn.jpg) no-repeat left bottom #4E4E4E; /*background-size: 27% 80%;*/ /* background-size: 177px 276px;*/
+ position: relative; background-size: 33%;
 }
 /*.location-pop{width: 80%; margin: 0 auto; left: 0; right: 0; bottom: 0; top: 0; position: absolute;}*/
 
@@ -594,7 +596,7 @@ font-size: 24px;
 
 .banner{/*max-height: 578px; overflow: hidden;*/}
 
-
+.banner{width: auto; margin: 0;}
 
 
 
@@ -602,6 +604,7 @@ font-size: 24px;
 @media (max-width: 2500px) {
 
   .banner{text-align: center;  /*max-height: 578px;*/ overflow: hidden;}
+  .banner{width: 1200px; margin: 0 auto;}
 
 }
 
@@ -618,6 +621,8 @@ font-size: 24px;
     left: 16%;
     z-index: 333;
   }*/
+
+  
 }
 
 
@@ -625,7 +630,29 @@ font-size: 24px;
 @media only screen and (max-width: 2500px) and (min-width: 1200px)  {
  /* .banner-graphics{top: -84px}
   .homepage .banner-graphics{top: -76px}*/
+
+
+  .banner img{width: 100%;}
+ /*.banner{width: 1200px; margin: 0 auto 0 20%;}*/
+
+
+
+
 }
+
+@media (max-width: 1100px) {
+
+  .banner{width: auto; margin: 0 auto;}
+
+
+
+}
+
+
+
+
+
+
 @media (max-width: 991px) {
     .banner-graphics{display: none;}
 }
@@ -643,7 +670,7 @@ font-size: 24px;
     left: 21%;
   }
   .banner-graphics {
-    top: -75px;
+    top: -72px;
   }
   .homepage .banner-graphics{top: -60px}
   .menu-area ul li {
@@ -668,7 +695,8 @@ font-size: 24px;
     font-size: 30px;
   }
   .location-pop .modal-content {
-    background-size: 25% 60%;
+    /*background-size: 25% 60%;*/
+    background-size: 30%;
   }
   .location-pop .modal-body {
     padding: 50px 0;
@@ -734,7 +762,8 @@ font-size: 24px;
     font-size: 20px;
   }
   .location-pop .modal-content {
-    background-size: 34% 100%;
+    /*background-size: 34% 100%;*/
+    background-size: 28%;
   }
 
 .left-menu{display: none; width: 25%;}
