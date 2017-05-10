@@ -901,6 +901,9 @@ font-size: 24px;
 
 .item-segrication a{color: #eebd42;}
 .item-segrication a:hover{text-decoration: none;}
-
+.address h3 a {
+    color: #2d2d2d !important;
+    text-decoration: none;
+}
 
 

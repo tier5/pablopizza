@@ -164,7 +164,7 @@ get_header(); ?>
                             <h2>LOCATiON</h2>
                             <div class="location-main">
                                 <div class="col-md-6 col-sm-12">
-                                    <?php $args = array(
+                                    <?php $k=0;$args = array(
                                                     'post_type' => 'locations',
                                                     'posts_per_page' => 4,
                                                     'order' => 'ASC'
@@ -173,12 +173,12 @@ get_header(); ?>
                                 // Query the posts:
                                 $obituary_query = new WP_Query($args);
                                 // Loop through the obituaries:
-                                while ($obituary_query->have_posts()) : $obituary_query->the_post();
+                                while ($obituary_query->have_posts()) : $obituary_query->the_post(); $k++;
                                 $thumb_id = get_post_thumbnail_id();
                                 $thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);
                                  ?>
-                                    <div class="address">
-                                        <h3><?php the_title();?></h3>
+                                    <div <?php if($k==1){?>class="address"<?php }else{?>class="address address-second"<?php } ?>>
+                                        <h3><a href="<?php the_field('link'); ?>" target="_blank"><?php the_title();?></a></h3>
                                         <div class="row">
                                             <div class="col-md-6 col-sm-6">
                                                 <p class="add">

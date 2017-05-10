@@ -946,8 +946,12 @@ function image_action1() {
 	global $wpdb;
 
 	$imgval = $_POST['imgval'];
+	setcookie('location', $imgval, time() + (86400 * 30), '/', $_SERVER['HTTP_HOST']);
 	//$imgval2 = $_POST['imgval2'];
 	update_option('show-popup-image',$imgval);
+	/*unset( $_COOKIE['show-popup-image2'] );
+
+	setcookie('show-popup-image1', $imgval);*/
 	exit;
 }
 add_action( 'wp_ajax_image_action2', 'image_action2' );
@@ -956,7 +960,12 @@ function image_action2() {
 	global $wpdb;
 
 	$imgval = $_POST['imgval'];
+	setcookie('location', $imgval, time() + (86400 * 30), '/', $_SERVER['HTTP_HOST']);
 	//$imgval2 = $_POST['imgval2'];
+
+	/*setcookie('show-popup-image2', $imgval);
+    	unset( $_COOKIE['show-popup-image1'] );*/
+
 	update_option('show-popup-image',$imgval);
 	exit;
 }

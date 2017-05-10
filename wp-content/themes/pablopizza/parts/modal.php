@@ -71,8 +71,26 @@
     </script>
     <script type="text/javascript">
         $(document).ready(function() {
+            <?php if(!isset($_COOKIE['location'])){?>
             $("#myModal").modal('show');
+            <?php } ?>
         });
+       /* $(document).ready(function() {
+              $(".lft-menu-btn").click(function(){
+
+            $("#location").modal('hide');
+                    });
+                    $("a[href*=http://localhost/pablopizza/#location").click(function(e) {
+    $("#myModal").modal('hide');
+});
+  
+        });*/
+
+        $(function(){
+  $('.menu-list').click(function(){
+    $("#myModal").modal('hide');
+  });
+});
     </script>
 
     <script>

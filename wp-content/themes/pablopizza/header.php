@@ -19,7 +19,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title><?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?></title>
+    <?php wp_title('|', true, 'right'); ?> <?php bloginfo('name'); ?>
 
     <!-- Bootstrap -->
     <link href="<?php echo get_template_directory_uri();?>/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@
 </head>
 
 <body>
-    <header>
+    <header>        
         <?php include('parts/menu-parts.php'); ?>
     </header>
    <div class="container-fluid">
