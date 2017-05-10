@@ -97,9 +97,30 @@
 
         </div>
         <div class="order-now">
+
+         
+
             <a href="javascript:void(0);">
                 <img src="<?php echo get_template_directory_uri();?>/images/order-now.png" alt="img">
             </a>
+
+            <!-- <?php if(isset($_COOKIE['location']) && $_COOKIE['location'] == 'grand-junction'){?>
+            <a href="javascript:void(0);" class="grand-junction-popup">
+                <img src="<?php echo get_template_directory_uri();?>/images/order-now.png" alt="img">
+            </a>
+            <?php }elseif(isset($_COOKIE['location']) && $_COOKIE['location'] == 'grand-frutia'){?>  
+            <a href="javascript:void(0);" class="grand-frutia-popup">
+                <img src="<?php echo get_template_directory_uri();?>/images/order-now.png" alt="img">
+            </a>      
+            <?php }else{?>         
+            
+            
+            <a>
+                <img src="<?php echo get_template_directory_uri();?>/images/order-now.png" alt="img">
+            </a>
+            
+            <?php } ?> -->
+           
         </div>
 
         <div class="left-logo">
